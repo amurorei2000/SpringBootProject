@@ -1,0 +1,98 @@
+package com.github.springbootproject.repository.items;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+@Repository
+public class ElectronicStoreItemJdbcDao implements ElectronicStoreItemRepository {
+
+    private JdbcTemplate jdbcTemplate;
+
+    static RowMapper<ItemEntity> itemEntityRowMapper = ((rs, rowNum) ->
+                new ItemEntity(
+                        rs.getInt("id"),
+                        rs.getNString("name"),
+                        rs.getNString("type"),
+                        rs.getInt("price"),
+                        rs.getInt("store_id"),
+                        rs.getInt("stock"),
+                        rs.getNString("cpu"),
+                        rs.getNString("capacity")
+                        )
+            );
+
+    public ElectronicStoreItemJdbcDao(@Qualifier("jdbcTemplate1") JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
+    @Override
+    public List<ItemEntity> findAllItems() {
+        return jdbcTemplate.query("SELECT * FROM item", itemEntityRowMapper);
+    }
+
+    @Override
+    public Integer saveItem(ItemEntity itemEntity) {
+        jdbcTemplate.update("INSERT INTO item(name, type, price, cpu, capacity) " +
+                                "VALUES (?, ?, ?, ?, ?)",
+                itemEntity.getName(),
+                itemEntity.getType(),
+                itemEntity.getPrice(),
+                itemEntity.getCpu(),
+                itemEntity.getCapacity()
+        );
+
+        ItemEntity foundedItem = jdbcTemplate.queryForObject("SELECT * FROM item WHERE name = ?",
+                itemEntityRowMapper, itemEntity.getName());
+
+        return foundedItem.getId();
+    }
+
+    @Override
+    public ItemEntity findItemById(Integer id) {
+        return jdbcTemplate.queryForObject("SELECT * FROM item WHERE id = ?",
+                itemEntityRowMapper, id);
+    }
+
+    @Override
+    public void deleteById(Integer id) {
+        jdbcTemplate.update("DELETE FROM item WHERE id = ?", id);
+    }
+
+    @Override
+    public List<ItemEntity> findItemByIds(Set<Integer> idSet) {
+        String placeHolder = idSet.stream()
+                .map(id -> "?")
+                .collect(Collectors.joining(", "));
+
+        return jdbcTemplate.query("SELECT * FROM item WHERE id IN (" +
+                placeHolder + ")",
+                itemEntityRowMapper, idSet.toArray());
+    }
+
+    @Override
+    public ItemEntity updateItemEntity(Integer id, ItemEntity itemEntity) {
+        jdbcTemplate.update("UPDATE item " +
+                        "SET name=?, type=?, price=?, cpu=?, capacity=? " +
+                        " WHERE id=?",
+                itemEntity.getName(), itemEntity.getType(), itemEntity.getPrice(),
+                itemEntity.getCpu(), itemEntity.getCapacity(), id);
+
+        return jdbcTemplate.queryForObject("SELECT * " +
+                "FROM item " +
+                "WHERE id = ?",
+                itemEntityRowMapper, id);
+    }
+
+    @Override
+    public void updateItemStock(Integer itemId, Integer stock) {
+        jdbcTemplate.update("UPDATE item SET stock=? WHERE id=?", stock, itemId);
+    }
+
+
+}
