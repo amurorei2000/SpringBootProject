@@ -1,10 +1,7 @@
 package com.github.springbootproject.web.controller;
 
 import com.github.springbootproject.service.AirReservationService;
-import com.github.springbootproject.web.dto.airline.ReservationRequest;
-import com.github.springbootproject.web.dto.airline.ReservationResult;
-import com.github.springbootproject.web.dto.airline.Ticket;
-import com.github.springbootproject.web.dto.airline.TicketResponse;
+import com.github.springbootproject.web.dto.airline.*;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,5 +25,12 @@ public class AirReservationController {
     @PostMapping("/reservations")
     public ReservationResult makeReservation(@RequestBody ReservationRequest reservationRequest) {
         return airReservationService.makeReservation(reservationRequest);
+    }
+
+    // 자신과 가족들의 항공권을 한 번에 결제하기
+    @PostMapping("/payments")
+    public String makeReservations(@RequestBody PaymentsRequest paymentsRequest) {
+        Integer count = airReservationService.makeReservations(paymentsRequest);
+        return String.format("요청하신 결제 중 %d건 진행완료 되었습니다.", count);
     }
 }

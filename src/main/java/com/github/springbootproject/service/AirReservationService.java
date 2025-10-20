@@ -9,12 +9,14 @@ import com.github.springbootproject.repository.reservations.Reservation;
 import com.github.springbootproject.repository.reservations.ReservationRepository;
 import com.github.springbootproject.repository.users.UserEntity;
 import com.github.springbootproject.repository.users.UserRepository;
+import com.github.springbootproject.web.dto.airline.PaymentsRequest;
 import com.github.springbootproject.web.dto.airline.ReservationRequest;
 import com.github.springbootproject.web.dto.airline.ReservationResult;
 import com.github.springbootproject.web.dto.airline.Ticket;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -79,5 +81,34 @@ public class AirReservationService {
         return new ReservationResult(
                 prices, charges, tax, totalPrice, isSuccess
         );
+    }
+
+    @Transactional(transactionManager = "tm2")
+    public Integer makeReservations(PaymentsRequest paymentsRequest) {
+
+        List<Integer> userIds = paymentsRequest.getUser_ids();
+        List<Integer> ticketIds = paymentsRequest.getAirline_ticket_ids();
+
+        if (userIds.isEmpty() || ticketIds.isEmpty()) {
+            return 0;
+        }
+
+        if (userIds.size() != ticketIds.size()) {
+            return 0;
+        }
+
+        // Passneger 리스트 가져오기
+        List<Passenger> passengers = passengerRepository.findPassengerByUserIds(paymentsRequest.getUser_ids());
+
+        // reservation 생성
+        Integer reservationCount = 0;
+
+        for (int i = 0; i< passengers.size(); i++) {
+            Reservation reservation = new Reservation(passengers.get(i).getPassengerId(), ticketIds.get(i));
+            reservationCount += reservationRepository.updateStatus(reservation);
+        }
+
+        // 예약된 수 반환
+        return reservationCount;
     }
 }

@@ -30,4 +30,15 @@ public class ReservationJdbcTemplateDao implements ReservationRepository {
 
         return rowNums > 0;
     }
+
+    @Override
+    public int updateStatus(Reservation reservation) {
+        return jdbcTemplate.update("UPDATE reservation " +
+                                "SET reservation_status = '확정' " +
+                                "WHERE passenger_id = ? AND airline_ticket_id = ? AND reservation_status = ?",
+                reservation.getPassengerId(),
+                reservation.getAirlineTicketId(),
+                reservation.getReservationStatus()
+                );
+    }
 }
