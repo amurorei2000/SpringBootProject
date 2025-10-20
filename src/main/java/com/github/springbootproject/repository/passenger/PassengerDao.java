@@ -1,7 +1,5 @@
 package com.github.springbootproject.repository.passenger;
 
-import com.github.springbootproject.repository.items.ItemEntity;
-import com.github.springbootproject.web.dto.airline.ReservationRequest;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -15,11 +13,11 @@ public class PassengerDao implements PassengerRepository {
     private JdbcTemplate jdbcTemplate;
 
     static RowMapper<Passenger> passengerRowMapper = ((rs, rowNum) ->
-            new Passenger(
-                    rs.getInt("passenger_id"),
-                    rs.getInt("user_id"),
-                    rs.getNString("passport_num")
-            )
+            new Passenger.PassengerBuilder()
+                    .passengerId(rs.getInt("passenger_id"))
+                    .userId(rs.getInt("user_id"))
+                    .passportNum(rs.getNString("passport_num"))
+                    .build()
     );
 
     public PassengerDao(@Qualifier("jdbcTemplate2") JdbcTemplate jdbcTemplate) {

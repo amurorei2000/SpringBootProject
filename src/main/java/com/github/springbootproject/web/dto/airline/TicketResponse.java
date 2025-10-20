@@ -1,18 +1,14 @@
 package com.github.springbootproject.web.dto.airline;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
 public class TicketResponse {
     private List<Ticket> tickets;
-
-    public TicketResponse() {
-    }
-
-    public TicketResponse(List<Ticket> tickets) {
-        this.tickets = tickets;
-    }
-
-    public List<Ticket> getTickets() {
-        return tickets;
-    }
 }

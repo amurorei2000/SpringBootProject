@@ -1,22 +1,13 @@
 package com.github.springbootproject.web.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Spec {
     private String cpu;
     private String capacity;
-
-    public Spec() {
-    }
-
-    public Spec(String cpu, String capacity) {
-        this.cpu = cpu;
-        this.capacity = capacity;
-    }
-
-    public String getCpu() {
-        return cpu;
-    }
-
-    public String getCapacity() {
-        return capacity;
-    }
 }

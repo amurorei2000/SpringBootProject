@@ -1,9 +1,11 @@
 package com.github.springbootproject.web.dto;
 
 import com.github.springbootproject.repository.items.ItemEntity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-import java.util.Objects;
-
+@Getter
+@NoArgsConstructor
 public class Item {
     private Integer id;
     private String name;
@@ -12,9 +14,6 @@ public class Item {
     private Integer store_id;
     private Integer stock;
     private Spec spec;
-
-    public Item() {
-    }
 
     public Item(Integer id, String name, String type, Integer price, Integer store_id, Integer stock, Spec spec) {
         this.id = id;
@@ -56,44 +55,4 @@ public class Item {
         this.spec = new Spec(itemEntity.getCpu(), itemEntity.getCapacity());
     }
 
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
-
-    public Integer getStore_id() {
-        return store_id;
-    }
-
-    public Integer getStock() {
-        return stock;
-    }
-
-    public Spec getSpec() {
-        return spec;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Item item = (Item) o;
-        return Objects.equals(id, item.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(id);
-    }
 }

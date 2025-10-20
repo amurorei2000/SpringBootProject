@@ -4,19 +4,17 @@ import com.github.springbootproject.service.ElectronicStoreItemService;
 import com.github.springbootproject.web.dto.BuyOrder;
 import com.github.springbootproject.web.dto.Item;
 import com.github.springbootproject.web.dto.ItemBody;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@RequiredArgsConstructor
 public class ElectronicStroreController {
 
-    private ElectronicStoreItemService electronicStoreItemService;
-
-    public ElectronicStroreController(ElectronicStoreItemService electronicStoreItemService) {
-        this.electronicStoreItemService = electronicStoreItemService;
-    }
+    private final ElectronicStoreItemService electronicStoreItemService;
 
     @GetMapping("/items")
     public List<Item> findAllItem() {

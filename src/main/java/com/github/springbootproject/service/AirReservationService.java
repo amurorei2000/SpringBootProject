@@ -13,26 +13,20 @@ import com.github.springbootproject.web.dto.airline.PaymentsRequest;
 import com.github.springbootproject.web.dto.airline.ReservationRequest;
 import com.github.springbootproject.web.dto.airline.ReservationResult;
 import com.github.springbootproject.web.dto.airline.Ticket;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class AirReservationService {
-    private UserRepository userRepository;
-    private AirlineTicketRepository airlineTicketRepository;
-    private PassengerRepository passengerRepository;
-    private ReservationRepository reservationRepository;
-
-    public AirReservationService(UserRepository userRepository, AirlineTicketRepository airlineTicketRepository, PassengerRepository passengerRepository, ReservationRepository reservationRepository) {
-        this.userRepository = userRepository;
-        this.airlineTicketRepository = airlineTicketRepository;
-        this.passengerRepository = passengerRepository;
-        this.reservationRepository = reservationRepository;
-    }
+    private final UserRepository userRepository;
+    private final AirlineTicketRepository airlineTicketRepository;
+    private final PassengerRepository passengerRepository;
+    private final ReservationRepository reservationRepository;
 
     public List<Ticket> findUserFavoritePlaceTickets(Integer userId, String ticketType) {
         // 유저를 userId로 가져와서 선호하는 여행지 도출

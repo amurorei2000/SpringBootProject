@@ -1,17 +1,11 @@
 package com.github.springbootproject.web.dto;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@Getter
 public class BuyOrder {
     private Integer itemId;
     private Integer itemNums;
-
-    public BuyOrder() {
-    }
-
-    public Integer getItemId() {
-        return itemId;
-    }
-
-    public Integer getItemNums() {
-        return itemNums;
-    }
 }

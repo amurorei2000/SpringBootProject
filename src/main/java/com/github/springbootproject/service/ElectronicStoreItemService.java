@@ -7,6 +7,7 @@ import com.github.springbootproject.repository.storeSales.StoreSalesRepository;
 import com.github.springbootproject.web.dto.BuyOrder;
 import com.github.springbootproject.web.dto.Item;
 import com.github.springbootproject.web.dto.ItemBody;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,15 +16,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class ElectronicStoreItemService {
-    private ElectronicStoreItemRepository electronicStoreItemRepository;
-    private StoreSalesRepository storeSalesRepository;
-
-    public ElectronicStoreItemService(ElectronicStoreItemRepository electronicStoreItemRepository, StoreSalesRepository storeSalesRepository) {
-        this.electronicStoreItemRepository = electronicStoreItemRepository;
-        this.storeSalesRepository = storeSalesRepository;
-    }
-
+    private final ElectronicStoreItemRepository electronicStoreItemRepository;
+    private final StoreSalesRepository storeSalesRepository;
 
     public List<Item> findAllItem() {
         List<ItemEntity> itemEntities = electronicStoreItemRepository.findAllItems();

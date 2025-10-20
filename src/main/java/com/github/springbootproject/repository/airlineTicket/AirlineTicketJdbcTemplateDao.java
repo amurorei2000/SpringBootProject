@@ -16,16 +16,16 @@ public class AirlineTicketJdbcTemplateDao implements AirlineTicketRepository {
     }
 
     static RowMapper<AirlineTicket> airlineTicketRowMapper = ((rs, rowNum) ->
-            new AirlineTicket(
-                    rs.getInt("ticket_id"),
-                    rs.getNString("ticket_type"),
-                    rs.getNString("departure_loc"),
-                    rs.getNString("arrival_loc"),
-                    rs.getDate("departure_at"),
-                    rs.getDate("return_at"),
-                    rs.getDouble("tax"),
-                    rs.getDouble("total_price")
-            )
+            new AirlineTicket.AirlineTicketBuilder()
+                    .ticketId(rs.getInt("ticket_id"))
+                    .ticketType(rs.getNString("ticket_type"))
+                    .departureLocation(rs.getNString("departure_loc"))
+                    .arrivalLocation(rs.getNString("arrival_loc"))
+                    .departureAt(rs.getDate("departure_at").toLocalDate().atStartOfDay())
+                    .returnAt(rs.getDate("return_at").toLocalDate().atStartOfDay())
+                    .tax(rs.getDouble("tax"))
+                    .totalPrice(rs.getDouble("total_price"))
+                    .build()
     );
 
     static RowMapper<AirlineTicketAndFlightInfo> airlineTicketAndFlightInfoRowMapper = ((rs, rowNum) ->

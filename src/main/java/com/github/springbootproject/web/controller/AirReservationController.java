@@ -2,18 +2,16 @@ package com.github.springbootproject.web.controller;
 
 import com.github.springbootproject.service.AirReservationService;
 import com.github.springbootproject.web.dto.airline.*;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/v1/api/air-reservation")
+@RequiredArgsConstructor
 public class AirReservationController {
-    AirReservationService airReservationService;
-
-    public AirReservationController(AirReservationService airReservationService) {
-        this.airReservationService = airReservationService;
-    }
+    private final AirReservationService airReservationService;
 
     @GetMapping("/tickets")
     public TicketResponse findAirlineTickets (@RequestParam("user-id") Integer userId, @RequestParam("airline-ticket-type") String ticketType) {
