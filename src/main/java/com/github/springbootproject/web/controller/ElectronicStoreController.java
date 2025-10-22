@@ -5,6 +5,9 @@ import com.github.springbootproject.web.dto.BuyOrder;
 import com.github.springbootproject.web.dto.Item;
 import com.github.springbootproject.web.dto.ItemBody;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,13 +15,17 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-public class ElectronicStroreController {
+@Slf4j
+public class ElectronicStoreController {
 
     private final ElectronicStoreItemService electronicStoreItemService;
 
     @GetMapping("/items")
     public List<Item> findAllItem() {
-        return electronicStoreItemService.findAllItem();
+        log.info("GET /items 요청이 들어왔습니다.");
+        List<Item> items = electronicStoreItemService.findAllItem();
+        log.info("GET /items 응답: " + items);
+        return items;
     }
 
     @PostMapping("/items")
@@ -39,7 +46,10 @@ public class ElectronicStroreController {
 
     @GetMapping("/items-queries")
     public List<Item> findItemByQueryIds(@RequestParam("id") List<Integer> ids) {
-        return electronicStoreItemService.findItemsByIds(ids);
+        log.info("/items-queries 요청");
+        List<Item> items = electronicStoreItemService.findItemsByIds(ids);
+        log.info("/items-queries 응답:" + items);
+        return items;
     }
 
     @DeleteMapping("items/{id}")

@@ -3,9 +3,13 @@ package com.github.springbootproject.web.dto;
 import com.github.springbootproject.repository.items.ItemEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
+@Setter
 @NoArgsConstructor
+@ToString
 public class Item {
     private Integer id;
     private String name;

@@ -4,10 +4,14 @@ import com.github.springbootproject.repository.items.ElectronicStoreItemReposito
 import com.github.springbootproject.repository.items.ItemEntity;
 import com.github.springbootproject.repository.storeSales.StoreSales;
 import com.github.springbootproject.repository.storeSales.StoreSalesRepository;
+import com.github.springbootproject.service.mapper.ItemMapper;
 import com.github.springbootproject.web.dto.BuyOrder;
 import com.github.springbootproject.web.dto.Item;
 import com.github.springbootproject.web.dto.ItemBody;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,14 +21,17 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class ElectronicStoreItemService {
+//    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     private final ElectronicStoreItemRepository electronicStoreItemRepository;
     private final StoreSalesRepository storeSalesRepository;
 
     public List<Item> findAllItem() {
         List<ItemEntity> itemEntities = electronicStoreItemRepository.findAllItems();
         return itemEntities.stream()
-                .map(Item::new)
+                .map(ItemMapper.INSTANCE::itemEntityToItem)
                 .collect(Collectors.toList());
     }
 
@@ -74,6 +81,7 @@ public class ElectronicStoreItemService {
                 itemBody.getSpec().getCapacity());
 
         ItemEntity itemEntityUpdated = electronicStoreItemRepository.updateItemEntity(id, itemEntity);
+
         return new Item(itemEntityUpdated);
     }
 
@@ -103,7 +111,10 @@ public class ElectronicStoreItemService {
         // 상품의 재고에 기존 계산한 재고를 구매하는 수량을 뺀다.
         electronicStoreItemRepository.updateItemStock(itemId, itemEntity.getStock() - successBuyItemNums);
 
-        if (successBuyItemNums == 4) throw new RuntimeException("4개를 구매하는건 허락하지 않습니다.");
+        if (successBuyItemNums == 4) {
+            log.error("4개를 구매하는 건 허락되지 않습니다.");
+            throw new RuntimeException("4개를 구매하는건 허락하지 않습니다.");
+        }
 
         // 상품 구매하는 수량 * 가격만큼 가계 매상으로 올린다.
         StoreSales storeSales = storeSalesRepository.findStoreSalesById(itemEntity.getStoreId());

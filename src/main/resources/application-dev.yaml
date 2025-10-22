@@ -1,4 +1,13 @@
 server:
-  port: 8095
+  port: 8080
+
+logging:
+  config: classpath:logback-spring-dev.xml
+
+#스웨거 설정
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
   

@@ -1,0 +1,280 @@
+2025-10-22 01:07:32.135 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Starting SpringBootProjectApplication using Java 21.0.8 with PID 33276 (E:\Programming\SuperCoding\SpringBootProject\build\classes\java\main started by amuro in E:\Programming\SuperCoding\SpringBootProject)
+2025-10-22 01:07:32.140 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - The following 1 profile is active: "dev"
+2025-10-22 01:07:32.758 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2025-10-22 01:07:32.765 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:07:32.767 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-10-22 01:07:32.767 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-22 01:07:32.803 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-10-22 01:07:32.803 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 638 ms
+2025-10-22 01:07:33.087 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:07:33.101 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2025-10-22 01:07:33.105 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Started SpringBootProjectApplication in 1.279 seconds (process running for 1.635)
+2025-10-22 01:08:20.515 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-22 01:08:20.520 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2025-10-22 01:13:28.307 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Starting SpringBootProjectApplication using Java 21.0.8 with PID 20652 (E:\Programming\SuperCoding\SpringBootProject\build\classes\java\main started by amuro in E:\Programming\SuperCoding\SpringBootProject)
+2025-10-22 01:13:28.314 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - The following 1 profile is active: "dev"
+2025-10-22 01:13:28.897 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2025-10-22 01:13:28.905 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:13:28.906 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-10-22 01:13:28.906 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-22 01:13:28.938 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-10-22 01:13:28.939 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 601 ms
+2025-10-22 01:13:29.216 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:13:29.229 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2025-10-22 01:13:29.234 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Started SpringBootProjectApplication in 1.23 seconds (process running for 1.572)
+2025-10-22 01:13:34.395 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22 01:13:34.395 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2025-10-22 01:13:34.395 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 0 ms
+2025-10-22 01:13:34.411 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - GET /items 요청이 들어왔습니다.
+2025-10-22 01:13:34.604 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - GET /items 응답: [com.github.springbootproject.web.dto.Item@267def78, com.github.springbootproject.web.dto.Item@6860ea15, com.github.springbootproject.web.dto.Item@495048ff, com.github.springbootproject.web.dto.Item@28840e5f, com.github.springbootproject.web.dto.Item@61cb2218, com.github.springbootproject.web.dto.Item@e145c76, com.github.springbootproject.web.dto.Item@4548eafb, com.github.springbootproject.web.dto.Item@4db6f2fb, com.github.springbootproject.web.dto.Item@7555d2b7, com.github.springbootproject.web.dto.Item@598ed787]
+2025-10-22 01:14:42.454 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-22 01:14:42.458 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2025-10-22 01:15:42.218 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Starting SpringBootProjectApplication using Java 21.0.8 with PID 33312 (E:\Programming\SuperCoding\SpringBootProject\build\classes\java\main started by amuro in E:\Programming\SuperCoding\SpringBootProject)
+2025-10-22 01:15:42.233 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - The following 1 profile is active: "dev"
+2025-10-22 01:15:42.852 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2025-10-22 01:15:42.860 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:15:42.861 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-10-22 01:15:42.861 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-22 01:15:42.895 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-10-22 01:15:42.895 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 624 ms
+2025-10-22 01:15:43.169 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:15:43.182 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2025-10-22 01:15:43.185 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Started SpringBootProjectApplication in 1.27 seconds (process running for 1.621)
+2025-10-22 01:15:48.354 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22 01:15:48.354 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2025-10-22 01:15:48.355 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2025-10-22 01:15:48.371 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - GET /items 요청이 들어왔습니다.
+2025-10-22 01:15:48.564 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - GET /items 응답: [Item(id=1, name=iPhone 12 Pro Max, type=스마트폰, price=1490000, store_id=null, stock=100, spec=Spec(cpu=A14 Bionic, capacity=512GB)), Item(id=2, name=Galaxy S21 Ultra, type=스마트폰, price=1690000, store_id=null, stock=61, spec=Spec(cpu=Exynos 2100, capacity=256GB)), Item(id=3, name=Pixel 6 Pro, type=스마트폰, price=1290000, store_id=null, stock=120, spec=Spec(cpu=Google Tensor, capacity=128GB)), Item(id=4, name=Dell XPS 15, type=노트북, price=2290000, store_id=null, stock=50, spec=Spec(cpu=Intel Core, capacity=1TB SSD)), Item(id=5, name=Sony Alpha 7 III, type=미러리스 카메라, price=2590000, store_id=null, stock=60, spec=Spec(cpu=BIONZ X, capacity=No intenal sd card)), Item(id=6, name=Xbod Series X, type=게임 콘솔, price=449000, store_id=null, stock=30, spec=Spec(cpu=Custom AMD Zen 2, capacity=1TB SSD)), Item(id=7, name=iPad Air, type=태블릿, price=849000, store_id=null, stock=70, spec=Spec(cpu=A14 Bionic, capacity=64GB)), Item(id=8, name=MacBook Pro, type=노트북, price=1790000, store_id=null, stock=40, spec=Spec(cpu=Apple M1Max, capacity=512GB)), Item(id=9, name=Sony WH-1000XM4, type=헤드폰, price=349000, store_id=null, stock=90, spec=Spec(cpu=Sony HD Nois, capacity=No intenal sd card)), Item(id=10, name=LG OLED CX, type=TV, price=2290000, store_id=null, stock=20, spec=Spec(cpu=LG α9 Gen 3 A, capacity=No intenal sd card))]
+2025-10-22 01:24:09.145 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-22 01:24:09.149 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2025-10-22 01:24:11.327 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Starting SpringBootProjectApplication using Java 21.0.8 with PID 30820 (E:\Programming\SuperCoding\SpringBootProject\build\classes\java\main started by amuro in E:\Programming\SuperCoding\SpringBootProject)
+2025-10-22 01:24:11.330 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - The following 1 profile is active: "dev"
+2025-10-22 01:24:11.937 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2025-10-22 01:24:11.945 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:24:11.946 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-10-22 01:24:11.946 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-22 01:24:11.980 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-10-22 01:24:11.980 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 622 ms
+2025-10-22 01:24:12.287 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:24:12.300 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2025-10-22 01:24:12.304 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Started SpringBootProjectApplication in 1.274 seconds (process running for 1.609)
+2025-10-22 01:24:17.117 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22 01:24:17.117 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2025-10-22 01:24:17.118 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2025-10-22 01:24:17.134 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - GET /items 요청이 들어왔습니다.
+2025-10-22 01:24:17.315 [http-nio-8080-exec-1] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - GET /items 응답: [Item(id=1, name=iPhone 12 Pro Max, type=스마트폰, price=1490000, store_id=null, stock=100, spec=Spec(cpu=A14 Bionic, capacity=512GB)), Item(id=2, name=Galaxy S21 Ultra, type=스마트폰, price=1690000, store_id=null, stock=61, spec=Spec(cpu=Exynos 2100, capacity=256GB)), Item(id=3, name=Pixel 6 Pro, type=스마트폰, price=1290000, store_id=null, stock=120, spec=Spec(cpu=Google Tensor, capacity=128GB)), Item(id=4, name=Dell XPS 15, type=노트북, price=2290000, store_id=null, stock=50, spec=Spec(cpu=Intel Core, capacity=1TB SSD)), Item(id=5, name=Sony Alpha 7 III, type=미러리스 카메라, price=2590000, store_id=null, stock=60, spec=Spec(cpu=BIONZ X, capacity=No intenal sd card)), Item(id=6, name=Xbod Series X, type=게임 콘솔, price=449000, store_id=null, stock=30, spec=Spec(cpu=Custom AMD Zen 2, capacity=1TB SSD)), Item(id=7, name=iPad Air, type=태블릿, price=849000, store_id=null, stock=70, spec=Spec(cpu=A14 Bionic, capacity=64GB)), Item(id=8, name=MacBook Pro, type=노트북, price=1790000, store_id=null, stock=40, spec=Spec(cpu=Apple M1Max, capacity=512GB)), Item(id=9, name=Sony WH-1000XM4, type=헤드폰, price=349000, store_id=null, stock=90, spec=Spec(cpu=Sony HD Nois, capacity=No intenal sd card)), Item(id=10, name=LG OLED CX, type=TV, price=2290000, store_id=null, stock=20, spec=Spec(cpu=LG α9 Gen 3 A, capacity=No intenal sd card))]
+2025-10-22 01:24:32.046 [http-nio-8080-exec-3] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - /items-queries 요청
+2025-10-22 01:24:32.061 [http-nio-8080-exec-3] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - /items-queries 응답:[Item(id=1, name=iPhone 12 Pro Max, type=스마트폰, price=1490000, store_id=1, stock=100, spec=Spec(cpu=A14 Bionic, capacity=512GB)), Item(id=3, name=Pixel 6 Pro, type=스마트폰, price=1290000, store_id=3, stock=120, spec=Spec(cpu=Google Tensor, capacity=128GB)), Item(id=4, name=Dell XPS 15, type=노트북, price=2290000, store_id=4, stock=50, spec=Spec(cpu=Intel Core, capacity=1TB SSD))]
+2025-10-22 01:24:36.341 [http-nio-8080-exec-4] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - /items-queries 요청
+2025-10-22 01:24:36.350 [http-nio-8080-exec-4] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - /items-queries 응답:[Item(id=1, name=iPhone 12 Pro Max, type=스마트폰, price=1490000, store_id=1, stock=100, spec=Spec(cpu=A14 Bionic, capacity=512GB)), Item(id=3, name=Pixel 6 Pro, type=스마트폰, price=1290000, store_id=3, stock=120, spec=Spec(cpu=Google Tensor, capacity=128GB)), Item(id=4, name=Dell XPS 15, type=노트북, price=2290000, store_id=4, stock=50, spec=Spec(cpu=Intel Core, capacity=1TB SSD))]
+2025-10-22 01:28:58.217 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-22 01:28:58.222 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2025-10-22 01:29:00.500 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Starting SpringBootProjectApplication using Java 21.0.8 with PID 20652 (E:\Programming\SuperCoding\SpringBootProject\build\classes\java\main started by amuro in E:\Programming\SuperCoding\SpringBootProject)
+2025-10-22 01:29:00.502 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - The following 1 profile is active: "dev"
+2025-10-22 01:29:01.056 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2025-10-22 01:29:01.064 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:29:01.065 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-10-22 01:29:01.065 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-22 01:29:01.097 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-10-22 01:29:01.097 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 570 ms
+2025-10-22 01:29:01.380 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:29:01.395 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2025-10-22 01:29:01.399 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Started SpringBootProjectApplication in 1.191 seconds (process running for 1.52)
+2025-10-22 01:45:25.886 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22 01:45:25.887 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2025-10-22 01:45:25.888 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 0 ms
+2025-10-22 01:45:26.149 [http-nio-8080-exec-2] [1;31mERROR[0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet][0;39m - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: 4개를 구매하는건 허락하지 않습니다.] with root cause
+java.lang.RuntimeException: 4개를 구매하는건 허락하지 않습니다.
+	at com.github.springbootproject.service.ElectronicStoreItemService.buyItems(ElectronicStoreItemService.java:111)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.github.springbootproject.service.ElectronicStoreItemService$$SpringCGLIB$$0.buyItems(<generated>)
+	at com.github.springbootproject.web.controller.ElectronicStroreController.buyItem(ElectronicStroreController.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-10-22 01:50:47.574 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-22 01:50:47.579 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2025-10-22 01:50:49.953 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Starting SpringBootProjectApplication using Java 21.0.8 with PID 6212 (E:\Programming\SuperCoding\SpringBootProject\build\classes\java\main started by amuro in E:\Programming\SuperCoding\SpringBootProject)
+2025-10-22 01:50:49.959 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - The following 1 profile is active: "dev"
+2025-10-22 01:50:50.554 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2025-10-22 01:50:50.562 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:50:50.562 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-10-22 01:50:50.562 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-22 01:50:50.596 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-10-22 01:50:50.596 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 611 ms
+2025-10-22 01:50:50.873 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2025-10-22 01:50:50.894 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2025-10-22 01:50:50.898 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Started SpringBootProjectApplication in 1.241 seconds (process running for 1.573)
+2025-10-22 01:50:54.564 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22 01:50:54.564 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2025-10-22 01:50:54.565 [http-nio-8080-exec-1] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2025-10-22 01:50:54.813 [http-nio-8080-exec-1] [1;31mERROR[0;39m [36mc.g.s.s.ElectronicStoreItemService[0;39m - 4개를 구매하는 건 허락되지 않습니다.
+2025-10-22 01:50:54.820 [http-nio-8080-exec-1] [1;31mERROR[0;39m [36mo.a.c.c.C.[.[.[.[dispatcherServlet][0;39m - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: 4개를 구매하는건 허락하지 않습니다.] with root cause
+java.lang.RuntimeException: 4개를 구매하는건 허락하지 않습니다.
+	at com.github.springbootproject.service.ElectronicStoreItemService.buyItems(ElectronicStoreItemService.java:116)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.github.springbootproject.service.ElectronicStoreItemService$$SpringCGLIB$$0.buyItems(<generated>)
+	at com.github.springbootproject.web.controller.ElectronicStroreController.buyItem(ElectronicStroreController.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-10-22 01:50:58.870 [http-nio-8080-exec-4] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - GET /items 요청이 들어왔습니다.
+2025-10-22 01:50:58.883 [http-nio-8080-exec-4] [34mINFO [0;39m [36mc.g.s.w.c.ElectronicStroreController[0;39m - GET /items 응답: [Item(id=1, name=iPhone 12 Pro Max, type=스마트폰, price=1490000, store_id=null, stock=100, spec=Spec(cpu=A14 Bionic, capacity=512GB)), Item(id=2, name=Galaxy S21 Ultra, type=스마트폰, price=1690000, store_id=null, stock=61, spec=Spec(cpu=Exynos 2100, capacity=256GB)), Item(id=3, name=Pixel 6 Pro, type=스마트폰, price=1290000, store_id=null, stock=120, spec=Spec(cpu=Google Tensor, capacity=128GB)), Item(id=4, name=Dell XPS 15, type=노트북, price=2290000, store_id=null, stock=50, spec=Spec(cpu=Intel Core, capacity=1TB SSD)), Item(id=5, name=Sony Alpha 7 III, type=미러리스 카메라, price=2590000, store_id=null, stock=60, spec=Spec(cpu=BIONZ X, capacity=No intenal sd card)), Item(id=6, name=Xbod Series X, type=게임 콘솔, price=449000, store_id=null, stock=30, spec=Spec(cpu=Custom AMD Zen 2, capacity=1TB SSD)), Item(id=7, name=iPad Air, type=태블릿, price=849000, store_id=null, stock=70, spec=Spec(cpu=A14 Bionic, capacity=64GB)), Item(id=8, name=MacBook Pro, type=노트북, price=1790000, store_id=null, stock=40, spec=Spec(cpu=Apple M1Max, capacity=512GB)), Item(id=9, name=Sony WH-1000XM4, type=헤드폰, price=349000, store_id=null, stock=90, spec=Spec(cpu=Sony HD Nois, capacity=No intenal sd card)), Item(id=10, name=LG OLED CX, type=TV, price=2290000, store_id=null, stock=20, spec=Spec(cpu=LG α9 Gen 3 A, capacity=No intenal sd card))]
+2025-10-22 01:51:09.837 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-22 01:51:09.841 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2025-10-23 01:32:37.555 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Starting SpringBootProjectApplication using Java 21.0.8 with PID 42184 (E:\Programming\SuperCoding\SpringBootProject\build\classes\java\main started by amuro in E:\Programming\SuperCoding\SpringBootProject)
+2025-10-23 01:32:37.556 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - The following 1 profile is active: "dev"
+2025-10-23 01:32:37.954 [main] [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
+2025-10-23 01:32:37.958 [main] [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-23 01:32:37.972 [main] [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+java.lang.TypeNotPresentException: Type javax.servlet.http.HttpServletRequest not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117)
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95)
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1296)
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:553)
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:501)
+	at org.springframework.core.ResolvableType.forClass(ResolvableType.java:1157)
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.getTargetType(PluginRegistriesBeanDefinitionRegistrar.java:101)
+	at org.springframework.plugin.core.config.PluginRegistriesBeanDefinitionRegistrar.registerBeanDefinitions(PluginRegistriesBeanDefinitionRegistrar.java:71)
+	at org.springframework.context.annotation.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:401)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:986)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:400)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:430)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.github.springbootproject.SpringBootProjectApplication.main(SpringBootProjectApplication.java:10)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 32 common frames omitted

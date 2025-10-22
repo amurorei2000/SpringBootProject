@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Repository
 public class ElectronicStoreItemJdbcDao implements ElectronicStoreItemRepository {
 
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     static RowMapper<ItemEntity> itemEntityRowMapper = ((rs, rowNum) ->
                 new ItemEntity.ItemEntityBuilder()
@@ -43,6 +43,8 @@ public class ElectronicStoreItemJdbcDao implements ElectronicStoreItemRepository
                 itemEntity.getName(),
                 itemEntity.getType(),
                 itemEntity.getPrice(),
+                itemEntity.getStoreId(),
+                itemEntity.getStock(),
                 itemEntity.getCpu(),
                 itemEntity.getCapacity()
         );
