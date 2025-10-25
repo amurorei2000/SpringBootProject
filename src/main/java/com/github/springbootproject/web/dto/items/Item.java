@@ -1,6 +1,8 @@
-package com.github.springbootproject.web.dto;
+package com.github.springbootproject.web.dto.items;
 
 import com.github.springbootproject.repository.items.ItemEntity;
+import com.github.springbootproject.web.dto.items.ItemBody;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,12 +13,24 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Item {
+    @Schema(description = "Item id", example = "1")
     private Integer id;
+
+    @Schema(description = "Item 이름", example = "Dell XPS 15")
     private String name;
+
+    @Schema(description = "Item 기기 타입", example = "Laptop")
     private String type;
+
+    @Schema(description = "Item 가격", example = "125000")
     private Integer price;
+
+    @Schema(description = "Item 스토어 아이디", example = "1")
     private Integer store_id;
+
+    @Schema(description = "Item 재고량", example = "10")
     private Integer stock;
+
     private Spec spec;
 
     public Item(Integer id, String name, String type, Integer price, Integer store_id, Integer stock, Spec spec) {

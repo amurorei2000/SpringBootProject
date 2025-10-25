@@ -1,7 +1,7 @@
 package com.github.springbootproject.service.mapper;
 
 import com.github.springbootproject.repository.items.ItemEntity;
-import com.github.springbootproject.web.dto.Item;
+import com.github.springbootproject.web.dto.items.Item;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
@@ -16,5 +16,4 @@ public interface ItemMapper {
     @Mapping(target = "spec.cpu", source = "cpu")
     @Mapping(target = "spec.capacity", source = "capacity")
     Item itemEntityToItem(ItemEntity itemEntity);
-
 }

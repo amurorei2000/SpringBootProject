@@ -5,13 +5,11 @@ import com.github.springbootproject.repository.items.ItemEntity;
 import com.github.springbootproject.repository.storeSales.StoreSales;
 import com.github.springbootproject.repository.storeSales.StoreSalesRepository;
 import com.github.springbootproject.service.mapper.ItemMapper;
-import com.github.springbootproject.web.dto.BuyOrder;
-import com.github.springbootproject.web.dto.Item;
-import com.github.springbootproject.web.dto.ItemBody;
+import com.github.springbootproject.web.dto.items.BuyOrder;
+import com.github.springbootproject.web.dto.items.Item;
+import com.github.springbootproject.web.dto.items.ItemBody;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

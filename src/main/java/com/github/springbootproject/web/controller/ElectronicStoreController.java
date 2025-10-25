@@ -1,13 +1,13 @@
 package com.github.springbootproject.web.controller;
 
 import com.github.springbootproject.service.ElectronicStoreItemService;
-import com.github.springbootproject.web.dto.BuyOrder;
-import com.github.springbootproject.web.dto.Item;
-import com.github.springbootproject.web.dto.ItemBody;
+import com.github.springbootproject.web.dto.items.BuyOrder;
+import com.github.springbootproject.web.dto.items.Item;
+import com.github.springbootproject.web.dto.items.ItemBody;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +20,7 @@ public class ElectronicStoreController {
 
     private final ElectronicStoreItemService electronicStoreItemService;
 
+    @Operation(summary = "모든 Item을 검색하는 API")
     @GetMapping("/items")
     public List<Item> findAllItem() {
         log.info("GET /items 요청이 들어왔습니다.");
@@ -28,41 +29,59 @@ public class ElectronicStoreController {
         return items;
     }
 
+    @Operation(summary = "모든 Item 등록")
     @PostMapping("/items")
     public String registerItem(@RequestBody ItemBody itemBody) {
         Integer id = electronicStoreItemService.saveItem(itemBody);
         return String.format("ID: %d", id);
     }
 
+    @Operation(summary = "모든 Item id로 검색")
     @GetMapping("items/{id}")
-    public Item findItemByPathId(@PathVariable Integer id) {
+    public Item findItemByPathId(
+            @Parameter(name = "id", description = "item ID", example = "1", required = true)
+            @PathVariable Integer id) {
         return electronicStoreItemService.findItemById(id);
     }
 
+    @Operation(summary = "모든 Item id로 검색(쿼리문)")
     @GetMapping("/items-query")
-    public Item findItemByQueryId(@RequestParam("id") Integer id) {
+    public Item findItemByQueryId(
+            @Parameter(name = "id", description = "item ID", example = "1", required = true)
+            @RequestParam("id") Integer id) {
         return electronicStoreItemService.findItemById(id);
     }
 
+    @Operation(summary = "모든 Item ids로 검색(쿼리문)")
     @GetMapping("/items-queries")
-    public List<Item> findItemByQueryIds(@RequestParam("id") List<Integer> ids) {
+    public List<Item> findItemByQueryIds(
+            @Parameter(name = "ids", description = "item IDs", example = "[1, 2, 3]", required = true)
+            @RequestParam("id") List<Integer> ids) {
         log.info("/items-queries 요청");
         List<Item> items = electronicStoreItemService.findItemsByIds(ids);
         log.info("/items-queries 응답:" + items);
         return items;
     }
 
+    @Operation(summary = "모든 Item id로 삭제")
     @DeleteMapping("items/{id}")
-    public String deleteItemByPathId(@PathVariable Integer id) {
+    public String deleteItemByPathId(
+            @Parameter(name = "id", description = "item ID", example = "1", required = true)
+            @PathVariable Integer id) {
         electronicStoreItemService.deleteItemByPathId(id);
         return String.format("Object with id = %d has been deleted", id);
     }
 
+    @Operation(summary = "모든 Item id로 수정")
     @PutMapping("/items/{id}")
-    public Item updateItem(@PathVariable Integer id, @RequestBody ItemBody itemBody) {
+    public Item updateItem(
+            @Parameter(name = "id", description = "item ID", example = "1", required = true)
+            @PathVariable Integer id,
+            @RequestBody ItemBody itemBody) {
         return electronicStoreItemService.updateItem(id, itemBody);
     }
 
+    @Operation(summary = "모든 Item 구매")
     @PostMapping("items/buy")
     public String buyItem(@RequestBody BuyOrder buyOrder) {
         Integer orderItemNums = electronicStoreItemService.buyItems(buyOrder);

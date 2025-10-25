@@ -17,16 +17,20 @@ public class ReservationJdbcTemplateDao implements ReservationRepository {
 
     @Override
     public Boolean saveReservation(Reservation reservation) {
-        Integer rowNums = jdbcTemplate.update("INSERT INTO reservation" +
-                "(passenger_id, airline_ticket_id, reservation_status, reserve_at) " +
-                "VALUES (?, ?, ?, ?)",
-                reservation.getPassengerId(),
-                reservation.getAirlineTicketId(),
-                reservation.getReservationStatus(),
-                new Date(Timestamp.valueOf(reservation.getReserveAt()).getTime())
-        );
+        try {
+            Integer rowNums = jdbcTemplate.update("INSERT INTO reservation" +
+                            "(passenger_id, airline_ticket_id, reservation_status, reserve_at) " +
+                            "VALUES (?, ?, ?, ?)",
+                    reservation.getPassengerId(),
+                    reservation.getAirlineTicketId(),
+                    reservation.getReservationStatus(),
+                    new Date(Timestamp.valueOf(reservation.getReserveAt()).getTime())
+            );
 
-        return rowNums > 0;
+            return rowNums > 0;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

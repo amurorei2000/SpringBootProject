@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class PassengerDao implements PassengerRepository {
@@ -25,9 +26,13 @@ public class PassengerDao implements PassengerRepository {
     }
 
     @Override
-    public Passenger findPassengerByUserId(Integer userId) {
-        return jdbcTemplate.queryForObject("SELECT * FROM passenger WHERE user_id = ?",
-                passengerRowMapper, userId);
+    public Optional<Passenger> findPassengerByUserId(Integer userId) {
+        try {
+            return Optional.ofNullable(jdbcTemplate.queryForObject("SELECT * FROM passenger WHERE user_id = ?",
+                    passengerRowMapper, userId));
+        } catch (Exception e) {
+            return Optional.empty();
+        }
     }
 
     @Override

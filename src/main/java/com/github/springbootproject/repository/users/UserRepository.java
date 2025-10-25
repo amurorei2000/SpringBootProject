@@ -1,5 +1,7 @@
 package com.github.springbootproject.repository.users;
 
+import java.util.Optional;
+
 public interface UserRepository {
-    UserEntity findUserById(Integer userId);
+    Optional<UserEntity> findUserById(Integer userId);
 }

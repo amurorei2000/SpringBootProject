@@ -1,4 +1,4 @@
-package com.github.springbootproject.web.dto;
+package com.github.springbootproject.web.dto.items;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
