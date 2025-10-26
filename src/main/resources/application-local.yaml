@@ -1,8 +1,13 @@
 server:
   port: 8080
 
+# sql 로그 출력 설정
 logging:
   config: classpath:logback-spring-local.xml
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
 
 #스웨거 설정
 spring:

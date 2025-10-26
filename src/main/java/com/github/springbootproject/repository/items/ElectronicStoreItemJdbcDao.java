@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -56,9 +57,10 @@ public class ElectronicStoreItemJdbcDao implements ElectronicStoreItemRepository
     }
 
     @Override
-    public ItemEntity findItemById(Integer id) {
-        return jdbcTemplate.queryForObject("SELECT * FROM item WHERE id = ?",
-                itemEntityRowMapper, id);
+    public Optional<ItemEntity> findItemById(Integer id) {
+
+        return Optional.ofNullable(jdbcTemplate.queryForObject("SELECT * FROM item WHERE id = ?",
+                itemEntityRowMapper, id));
     }
 
     @Override

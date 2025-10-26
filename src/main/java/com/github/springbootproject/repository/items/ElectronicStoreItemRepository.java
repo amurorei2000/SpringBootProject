@@ -1,6 +1,7 @@
 package com.github.springbootproject.repository.items;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 public interface ElectronicStoreItemRepository {
@@ -8,7 +9,7 @@ public interface ElectronicStoreItemRepository {
 
     Integer saveItem(ItemEntity itemEntity);
 
-    ItemEntity findItemById(Integer id);
+    Optional<ItemEntity> findItemById(Integer id);
 
     void deleteById(Integer id);
 
