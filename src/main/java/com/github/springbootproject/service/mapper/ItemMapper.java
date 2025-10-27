@@ -16,7 +16,7 @@ public interface ItemMapper {
     // 메소드
     @Mapping(target = "spec.cpu", source = "cpu")
     @Mapping(target = "spec.capacity", source = "capacity")
-    @Mapping(target = "store_id", source = "storeId")
+    @Mapping(target = "store_id", source = "storeSales.id")
     Item itemEntityToItem(ItemEntity itemEntity);
 
     @Mapping(source = "id", target = "id")
@@ -25,7 +25,7 @@ public interface ItemMapper {
     @Mapping(source = "itemBody.name", target = "name")
     @Mapping(source = "itemBody.type", target = "type")
     @Mapping(source = "itemBody.price", target = "price")
-    @Mapping(target = "storeId", ignore = true)
+    @Mapping(target = "storeSales.id", ignore = true)
     @Mapping(constant = "0", target = "stock")
     ItemEntity idAndItemBodyToItemEntity(Integer id, ItemBody itemBody);
 }

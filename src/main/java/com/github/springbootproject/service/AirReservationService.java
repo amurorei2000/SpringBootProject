@@ -2,6 +2,7 @@ package com.github.springbootproject.service;
 
 import com.github.springbootproject.repository.airlineTicket.AirlineTicket;
 import com.github.springbootproject.repository.airlineTicket.AirlineTicketAndFlightInfo;
+import com.github.springbootproject.repository.airlineTicket.AirlineTicketJpaRepository;
 import com.github.springbootproject.repository.airlineTicket.AirlineTicketRepository;
 import com.github.springbootproject.repository.passenger.Passenger;
 import com.github.springbootproject.repository.passenger.PassengerRepository;
@@ -12,11 +13,11 @@ import com.github.springbootproject.repository.users.UserRepository;
 import com.github.springbootproject.service.exceptions.InvalidValueException;
 import com.github.springbootproject.service.exceptions.NotAcceptException;
 import com.github.springbootproject.service.exceptions.NotFoundException;
-import com.github.springbootproject.web.dto.airline.PaymentsRequest;
-import com.github.springbootproject.web.dto.airline.ReservationRequest;
-import com.github.springbootproject.web.dto.airline.ReservationResult;
-import com.github.springbootproject.web.dto.airline.Ticket;
+import com.github.springbootproject.web.dto.airline.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,6 +34,7 @@ public class AirReservationService {
     private final AirlineTicketRepository airlineTicketRepository;
     private final PassengerRepository passengerRepository;
     private final ReservationRepository reservationRepository;
+    private final AirlineTicketJpaRepository airlineTicketJpaRepository;
 
     public List<Ticket> findUserFavoritePlaceTickets(Integer userId, String ticketType) {
         // 유저를 userId로 가져와서 선호하는 여행지 도출
@@ -133,5 +135,32 @@ public class AirReservationService {
 
         // 예약된 수 반환
         return reservationCount;
+    }
+
+    public FlightResponse getFlightPageable(String type, Pageable pageable) {
+        Page<AirlineTicket> airlineTickets = airlineTicketJpaRepository.findAllByTicketType(type, pageable);
+
+        List<FlightInfo> flightInfos = airlineTickets.stream()
+                .map(ticket -> new FlightInfo(
+                        ticket.getTicketId(),
+                        ticket.getDepartureAt(),
+                        ticket.getReturnAt(),
+                        ticket.getDepartureLocation(),
+                        ticket.getArrivalLocation()
+                ))
+                .toList();
+
+        return new FlightResponse(flightInfos);
+    }
+
+    public List<String> getReservedArrivalLocations(String username) {
+
+        // 유저 이름으로 패신저 아이디 조회 - users
+
+        // 패신저 아이디로 항공권 티켓 조회 - passenger
+
+        // 항공권 티켓 아이디로 도착지 조회 - airline_ticket
+
+        return Arrays.asList("파리", "런던");
     }
 }

@@ -1,5 +1,6 @@
 package com.github.springbootproject.repository.items;
 
+import com.github.springbootproject.repository.storeSales.StoreSales;
 import com.github.springbootproject.web.dto.items.ItemBody;
 import jakarta.persistence.*;
 import lombok.*;
@@ -29,8 +30,9 @@ public class ItemEntity {
     @Column(name = "price")
     private Integer price;
 
-    @Column(name = "store_id")
-    private Integer storeId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "store_id")
+    private StoreSales storeSales;
 
     @Column(name = "stock", columnDefinition = "DEFAULT 0 CHECK(stock) >= 0", nullable = false)
     private Integer stock;

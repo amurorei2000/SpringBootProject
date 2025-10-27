@@ -9,6 +9,9 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.engine.jdbc.Size;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +27,7 @@ public class AirReservationController {
 
     @GetMapping("/tickets")
     @Operation(summary = "여행지 티켓 조회", description = "사용자가 선호하는 여행지를 조회하는 api")
+    @ResponseStatus(HttpStatus.OK)
     public TicketResponse findAirlineTickets (
             @Parameter(name = "user-Id", description = "유저 ID", example = "1")
             @RequestParam("user-id") Integer userId,
@@ -52,4 +56,27 @@ public class AirReservationController {
         Integer count = airReservationService.makeReservations(paymentsRequest);
         return String.format("요청하신 결제 중 %d건 진행완료 되었습니다.", count);
     }
+
+    @GetMapping("/flight-pageable")
+    @Operation(summary = "항공권 페이지", description = "항공권 왕복|편도에 따라 Pagable")
+    @ResponseStatus(HttpStatus.OK)
+    public FlightResponse getFlightPageable(
+            @Parameter(name = "type", description = "왕복|편도", example = "왕복")
+            @RequestParam("type") String type,
+            Pageable pageable) {
+
+        return airReservationService.getFlightPageable(type, pageable);
+    }
+
+    @GetMapping("/username-arrival-location")
+    @Operation(summary = "예약자 도착지 조회", description = "예약자의 항공편 목적지 리스트 조회")
+    @ResponseStatus(HttpStatus.OK)
+    public List<String> getReservedArrivalLocations(
+            @Parameter(name = "username", description = "예약자 이름")
+            @RequestParam("username") String username) {
+
+        return airReservationService.getReservedArrivalLocations(username);
+
+    }
+
 }

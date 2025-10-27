@@ -1,5 +1,6 @@
 package com.github.springbootproject.repository.items;
 
+import com.github.springbootproject.repository.storeSales.StoreSales;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -21,7 +22,7 @@ public class ElectronicStoreItemJdbcDao implements ElectronicStoreItemRepository
                         .name(rs.getNString("name"))
                         .type(rs.getNString("type"))
                         .price(rs.getInt("price"))
-                        .storeId(rs.getInt("store_id"))
+                        .storeSales(new StoreSales(rs.getInt("store_id"), "", 10))
                         .stock(rs.getInt("stock"))
                         .cpu(rs.getNString("cpu"))
                         .capacity(rs.getNString("capacity"))
@@ -44,7 +45,7 @@ public class ElectronicStoreItemJdbcDao implements ElectronicStoreItemRepository
                 itemEntity.getName(),
                 itemEntity.getType(),
                 itemEntity.getPrice(),
-                itemEntity.getStoreId(),
+                itemEntity.getStoreSales().getId(),
                 itemEntity.getStock(),
                 itemEntity.getCpu(),
                 itemEntity.getCapacity()
