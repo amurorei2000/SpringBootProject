@@ -1,5 +1,6 @@
 package com.github.springbootproject.repository.passenger;
 
+import com.github.springbootproject.repository.users.UserEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,8 +18,9 @@ public class Passenger {
     @Column(name = "passenger_id")
     private Integer passengerId;
 
-    @Column(name = "user_id")
-    private Integer userId;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", unique = true, nullable = false)
+    private UserEntity user;
 
     @Column(name = "passport_num", length = 50)
     private String passportNum;

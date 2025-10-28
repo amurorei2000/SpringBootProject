@@ -45,7 +45,7 @@ public class ElectronicStoreItemJdbcDao implements ElectronicStoreItemRepository
                 itemEntity.getName(),
                 itemEntity.getType(),
                 itemEntity.getPrice(),
-                itemEntity.getStoreSales().getId(),
+                itemEntity.getStoreSales(),
                 itemEntity.getStock(),
                 itemEntity.getCpu(),
                 itemEntity.getCapacity()

@@ -1,5 +1,6 @@
 package com.github.springbootproject.repository.users;
 
+import com.github.springbootproject.repository.passenger.Passenger;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,4 +26,7 @@ public class UserEntity {
 
     @Column(name = "phone_num", length = 30)
     private String phoneNum;
+
+    @OneToOne(mappedBy = "user")
+    private Passenger passenger;
 }

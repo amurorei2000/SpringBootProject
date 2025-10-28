@@ -1,11 +1,13 @@
 package com.github.springbootproject.repository.airlineTicket;
 
+import com.github.springbootproject.repository.flight.Flight;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.sql.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Getter
@@ -42,5 +44,8 @@ public class AirlineTicket {
 
     @Column(name = "total_price")
     private double totalPrice;
+
+    @OneToMany(mappedBy = "airlineTicket")
+    private AirlineTicket airlineTicket;
 
 }

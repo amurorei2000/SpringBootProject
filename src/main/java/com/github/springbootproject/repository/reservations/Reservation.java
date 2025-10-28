@@ -1,5 +1,7 @@
 package com.github.springbootproject.repository.reservations;
 
+import com.github.springbootproject.repository.airlineTicket.AirlineTicket;
+import com.github.springbootproject.repository.passenger.Passenger;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,11 +20,13 @@ public class Reservation {
     @Column(name = "reservation_id")
     private Integer reservationId;
 
-    @Column(name = "passenger_id")
-    private Integer passengerId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "passenger_id")
+    private Passenger passenger;
 
-    @Column(name = "airline_ticket_id")
-    private Integer airlineTicketId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "airline_ticekt_id")
+    private AirlineTicket airlineTicket;
 
     @Column(name = "reservation_status")
     private String reservationStatus;
@@ -30,9 +34,9 @@ public class Reservation {
     @Column(name = "reserve_at")
     private LocalDateTime reserveAt;
 
-    public Reservation(Integer passengerId, Integer airlineTicketId) {
-        this.passengerId = passengerId;
-        this.airlineTicketId = airlineTicketId;
+    public Reservation(Passenger passenger, AirlineTicket airlineTicket) {
+        this.passenger = passenger;
+        this.airlineTicket = airlineTicket;
         this.reservationStatus = "대기";
         this.reserveAt = LocalDateTime.now();
     }

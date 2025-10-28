@@ -5,6 +5,8 @@ import com.github.springbootproject.web.dto.items.ItemBody;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Optional;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,8 +32,8 @@ public class ItemEntity {
     @Column(name = "price")
     private Integer price;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "store_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "store_id", nullable = true)
     private StoreSales storeSales;
 
     @Column(name = "stock", columnDefinition = "DEFAULT 0 CHECK(stock) >= 0", nullable = false)
@@ -42,6 +44,11 @@ public class ItemEntity {
 
     @Column(name = "capacity", length = 30)
     private String capacity;
+
+    public Optional<StoreSales> getStoreSales(){
+        return Optional.ofNullable(storeSales);
+    }
+
 
     public void setItemBody(ItemBody itemBody) {
         this.name = itemBody.getName();

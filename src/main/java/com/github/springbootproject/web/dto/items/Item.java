@@ -68,7 +68,7 @@ public class Item {
         this.name = itemEntity.getName();
         this.type = itemEntity.getType();
         this.price = itemEntity.getPrice();
-        this.store_id = itemEntity.getStoreId();
+        this.store_id = itemEntity.getStoreSales().get().getId();
         this.stock = itemEntity.getStock();
         this.spec = new Spec(itemEntity.getCpu(), itemEntity.getCapacity());
     }
