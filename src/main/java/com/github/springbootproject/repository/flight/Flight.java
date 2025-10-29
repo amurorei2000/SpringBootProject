@@ -2,10 +2,17 @@ package com.github.springbootproject.repository.flight;
 
 import com.github.springbootproject.repository.airlineTicket.AirlineTicket;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(of = "flightId")
+@Entity
+@Table(name = "flight")
 public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +36,8 @@ public class Flight {
     private String arrival_loc;
 
     @Column(name = "flight price")
-    private String flightPrice;
+    private Double flightPrice;
 
-
+    @Column(name = "charge")
+    private Double charge;
 }

@@ -40,12 +40,12 @@ public class AirlineTicket {
     private LocalDateTime returnAt;
 
     @Column(name = "tax")
-    private double tax;
+    private Double tax;
 
     @Column(name = "total_price")
-    private double totalPrice;
+    private Double totalPrice;
 
-    @OneToMany(mappedBy = "airlineTicket")
-    private AirlineTicket airlineTicket;
+    @OneToMany(mappedBy = "airline_ticket")
+    private List<Flight> flightList;
 
 }

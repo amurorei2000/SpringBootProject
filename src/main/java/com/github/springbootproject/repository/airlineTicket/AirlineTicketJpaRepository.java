@@ -5,8 +5,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 
 @Repository
 public interface AirlineTicketJpaRepository extends JpaRepository<AirlineTicket, Integer> {
     Page<AirlineTicket> findAllByTicketType(String ticketType, Pageable pageable);
+
+    List<AirlineTicketAndFlightInfo> findAllByArrivalLocationAndTicketType(String arrivalLocation, String ticketType);
 }
