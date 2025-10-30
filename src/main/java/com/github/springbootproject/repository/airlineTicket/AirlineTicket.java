@@ -45,7 +45,7 @@ public class AirlineTicket {
     @Column(name = "total_price")
     private Double totalPrice;
 
-    @OneToMany(mappedBy = "airline_ticket")
+    @OneToMany(mappedBy = "airlineTicket")
     private List<Flight> flightList;
 
 }

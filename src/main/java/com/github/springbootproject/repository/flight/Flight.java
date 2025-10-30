@@ -21,7 +21,7 @@ public class Flight {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ticket_id",  nullable = false)
-    private AirlineTicket ticket;
+    private AirlineTicket airlineTicket;
 
     @Column(name = "departure_at")
     private LocalDateTime departureAt;

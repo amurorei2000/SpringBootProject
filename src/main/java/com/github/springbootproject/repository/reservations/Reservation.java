@@ -20,12 +20,12 @@ public class Reservation {
     @Column(name = "reservation_id")
     private Integer reservationId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "passenger_id")
     private Passenger passenger;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "airline_ticekt_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "airline_ticket_id")
     private AirlineTicket airlineTicket;
 
     @Column(name = "reservation_status")

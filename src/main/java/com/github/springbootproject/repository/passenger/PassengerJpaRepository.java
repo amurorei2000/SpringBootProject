@@ -9,6 +9,4 @@ import java.util.Optional;
 public interface PassengerJpaRepository extends JpaRepository<Passenger, Integer> {
 
     Optional<Passenger> findPassengerByUser_UserId(Integer userId);
-
-    Passenger findbyUserId(Integer userId);
 }

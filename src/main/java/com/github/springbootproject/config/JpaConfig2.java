@@ -19,7 +19,8 @@ import java.util.Map;
         basePackages = {"com.github.springbootproject.repository.airlineTicket",
                 "com.github.springbootproject.repository.passenger",
                 "com.github.springbootproject.repository.reservations",
-                "com.github.springbootproject.repository.users"
+                "com.github.springbootproject.repository.users",
+                "com.github.springbootproject.repository.flight"
         },
         entityManagerFactoryRef = "entityManagerFactoryBean2",
         transactionManagerRef = "transactionManager2"
@@ -33,7 +34,8 @@ public class JpaConfig2 {
         em.setPackagesToScan("com.github.springbootproject.repository.airlineTicket",
                 "com.github.springbootproject.repository.passenger",
                 "com.github.springbootproject.repository.reservations",
-                "com.github.springbootproject.repository.users");
+                "com.github.springbootproject.repository.users",
+                "com.github.springbootproject.repository.flight");
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);

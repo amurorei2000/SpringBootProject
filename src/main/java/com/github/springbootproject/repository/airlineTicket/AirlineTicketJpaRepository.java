@@ -12,5 +12,5 @@ import java.util.List;
 public interface AirlineTicketJpaRepository extends JpaRepository<AirlineTicket, Integer> {
     Page<AirlineTicket> findAllByTicketType(String ticketType, Pageable pageable);
 
-    List<AirlineTicketAndFlightInfo> findAllByArrivalLocationAndTicketType(String arrivalLocation, String ticketType);
+    List<AirlineTicket> findAllByArrivalLocationAndTicketType(String arrivalLocation, String ticketType);
 }
