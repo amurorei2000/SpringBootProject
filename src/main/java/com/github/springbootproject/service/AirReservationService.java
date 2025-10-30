@@ -188,6 +188,6 @@ public class AirReservationService {
 
         locations.forEach(location -> log.info("locations: " + locations));
 
-
         return locations;
-    }`}
+    }
+}
