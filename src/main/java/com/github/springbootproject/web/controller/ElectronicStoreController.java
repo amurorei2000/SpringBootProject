@@ -26,9 +26,7 @@ public class ElectronicStoreController {
     @Operation(summary = "모든 Item을 검색하는 API")
     @GetMapping("/items")
     public List<Item> findAllItem() {
-        log.info("GET /items 요청이 들어왔습니다.");
         List<Item> items = electronicStoreItemService.findAllItem();
-        log.info("GET /items 응답: " + items);
         return items;
     }
 
@@ -60,13 +58,11 @@ public class ElectronicStoreController {
     public List<Item> findItemByQueryIds(
             @Parameter(name = "ids", description = "item IDs", example = "[1, 2, 3]", required = true)
             @RequestParam("id") List<Integer> ids) {
-        log.info("/items-queries 요청");
         List<Item> items = electronicStoreItemService.findItemsByIds(ids);
-        log.info("/items-queries 응답:" + items);
         return items;
     }
 
-    @Operation(summary = "모든 Item id로 삭제")
+    @Operation(summary = "단일 Item id로 삭제")
     @DeleteMapping("items/{id}")
     public String deleteItemByPathId(
             @Parameter(name = "id", description = "item ID", example = "1", required = true)
@@ -97,10 +93,7 @@ public class ElectronicStoreController {
             @Parameter(name="types", description = "item type", example = "[스마트폰, 노트북]", required = true)
             @RequestParam("type") List<String> types) {
 
-        log.info("/items-types 요청 types: " + types);
         List<Item> items = electronicStoreItemService.findItemsByTypes(types);
-        log.info("/items-types 응답: " + items);
-
         return items;
     }
 
