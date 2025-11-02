@@ -1,7 +1,10 @@
 package com.github.springbootproject.repository.storeSales;
 
+import com.github.springbootproject.repository.items.ItemEntity;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -23,4 +26,7 @@ public class StoreSales {
 
     @Column(name = "amount", columnDefinition = "DEFAULT 0 CHECK(amount) >= 0", nullable = false)
     private Integer amount;
+
+    @OneToMany(mappedBy = "storeSales")
+    private List<ItemEntity> itemEntities;
 }

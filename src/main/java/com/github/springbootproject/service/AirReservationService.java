@@ -9,6 +9,7 @@ import com.github.springbootproject.repository.flight.FlightJpaRepository;
 import com.github.springbootproject.repository.passenger.Passenger;
 import com.github.springbootproject.repository.passenger.PassengerJpaRepository;
 import com.github.springbootproject.repository.passenger.PassengerRepository;
+import com.github.springbootproject.repository.reservations.FlightPriceAndCharge;
 import com.github.springbootproject.repository.reservations.Reservation;
 import com.github.springbootproject.repository.reservations.ReservationJpaRepository;
 import com.github.springbootproject.repository.reservations.ReservationRepository;
@@ -18,6 +19,8 @@ import com.github.springbootproject.repository.users.UserRepository;
 import com.github.springbootproject.service.exceptions.InvalidValueException;
 import com.github.springbootproject.service.exceptions.NotAcceptException;
 import com.github.springbootproject.service.exceptions.NotFoundException;
+import com.github.springbootproject.service.mapper.ItemMapper;
+import com.github.springbootproject.service.mapper.TicketMapper;
 import com.github.springbootproject.web.dto.airline.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -66,7 +69,7 @@ public class AirReservationService {
 
         // 이 둘의 정보를 조합해서 Ticket DTO를 만든다.
         return airlineTickets.stream()
-                .map(ticket -> new Ticket())
+                .map(airlineTicket -> TicketMapper.INSTANCE.airlineTicketToTicket(airlineTicket))
                 .collect(Collectors.toList());
     }
 
@@ -189,5 +192,22 @@ public class AirReservationService {
         locations.forEach(location -> log.info("locations: " + locations));
 
         return locations;
+    }
+
+    public Double findUserFlightSumPrice(Integer userId) {
+        // 1. flight_price, charge 구하기
+        List<FlightPriceAndCharge> flightPriceAndCharges = reservationJpaRepository.findFlightPriceAndCharge(userId);
+
+        // 2. 모든 flight_price와 charge의 각각의 합을 구하기
+        Double flightSum = flightPriceAndCharges.stream()
+                .mapToDouble(FlightPriceAndCharge::getFlightPrice)
+                .sum();
+
+        Double charges = flightPriceAndCharges.stream()
+                .mapToDouble(FlightPriceAndCharge::getCharge)
+                .sum();
+
+        // 3. 두 개의 합을 다시 더하고 return
+        return flightSum + charges;
     }
 }

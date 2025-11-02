@@ -17,7 +17,7 @@ public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "flight_id")
-    private String flightId;
+    private Integer flightId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ticket_id",  nullable = false)
@@ -35,7 +35,7 @@ public class Flight {
     @Column(name = "arrival_loc")
     private String arrival_loc;
 
-    @Column(name = "flight price")
+    @Column(name = "flight_price")
     private Double flightPrice;
 
     @Column(name = "charge")

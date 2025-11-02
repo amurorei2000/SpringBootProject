@@ -79,4 +79,14 @@ public class AirReservationController {
 
     }
 
+    @GetMapping("/users-sum-price")
+    @Operation(summary = "예약자 비용 합계", description = "예약자의 예약한 항공편과 수수료의 합")
+    @ResponseStatus(HttpStatus.OK)
+    public Double getSumPriceAndCharge(
+            @Parameter(name = "user-id", description = "예약자 아이디")
+            @RequestParam("user-id") Integer userId) {
+
+        return airReservationService.findUserFlightSumPrice(userId);
+    }
+
 }

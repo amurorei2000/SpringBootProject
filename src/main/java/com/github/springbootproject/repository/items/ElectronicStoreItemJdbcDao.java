@@ -22,7 +22,7 @@ public class ElectronicStoreItemJdbcDao implements ElectronicStoreItemRepository
                         .name(rs.getNString("name"))
                         .type(rs.getNString("type"))
                         .price(rs.getInt("price"))
-                        .storeSales(new StoreSales(rs.getInt("store_id"), "", 10))
+                        .storeSales(new StoreSales())
                         .stock(rs.getInt("stock"))
                         .cpu(rs.getNString("cpu"))
                         .capacity(rs.getNString("capacity"))

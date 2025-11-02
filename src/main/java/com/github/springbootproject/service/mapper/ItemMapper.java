@@ -14,8 +14,8 @@ public interface ItemMapper {
     ItemMapper INSTANCE = Mappers.getMapper(ItemMapper.class);
 
     // 메소드
-    @Mapping(target = "spec.cpu", source = "cpu")
-    @Mapping(target = "spec.capacity", source = "capacity")
+    @Mapping(source = "cpu", target = "spec.cpu")
+    @Mapping(source = "capacity", target = "spec.capacity")
     Item itemEntityToItem(ItemEntity itemEntity);
 
     @Mapping(source = "id", target = "id")

@@ -12,6 +12,7 @@ import com.github.springbootproject.service.mapper.ItemMapper;
 import com.github.springbootproject.web.dto.items.BuyOrder;
 import com.github.springbootproject.web.dto.items.Item;
 import com.github.springbootproject.web.dto.items.ItemBody;
+import com.github.springbootproject.web.dto.items.StoreInfo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
@@ -185,5 +186,13 @@ public class ElectronicStoreItemService {
         Page<ItemEntity> itemEntities = electronicStoreItemJpaRepository.findAllByTypeIn(types, pageable);
 
         return itemEntities.map(ItemMapper.INSTANCE::itemEntityToItem);
+    }
+
+    @Transactional(transactionManager = "transactionManager1")
+    public List<StoreInfo> findAllStoreInfo() {
+//        List<StoreSales> storeSales = storeSalesJpaRepository.findAll();
+        List<StoreSales> storeSales = storeSalesJpaRepository.findAllFetchJoin();
+        log.info("======================== N + 1 확인용 ==========================");
+        return storeSales.stream().map(StoreInfo::new).toList();
     }
 }

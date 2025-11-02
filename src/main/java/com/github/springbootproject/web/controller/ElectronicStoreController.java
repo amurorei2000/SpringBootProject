@@ -4,6 +4,7 @@ import com.github.springbootproject.service.ElectronicStoreItemService;
 import com.github.springbootproject.web.dto.items.BuyOrder;
 import com.github.springbootproject.web.dto.items.Item;
 import com.github.springbootproject.web.dto.items.ItemBody;
+import com.github.springbootproject.web.dto.items.StoreInfo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
@@ -122,5 +123,11 @@ public class ElectronicStoreController {
     @GetMapping("/items-types-page")
     public Page<Item> findItemsPagination(@RequestParam("type") List<String> types, Pageable pageable) {
         return electronicStoreItemService.findAllWithPageable(types, pageable);
+    }
+
+    @Operation(summary = "전체 stores 정보 검색")
+    @GetMapping("/stores")
+    public List<StoreInfo> findAllStoreInfo() {
+        return electronicStoreItemService.findAllStoreInfo();
     }
 }

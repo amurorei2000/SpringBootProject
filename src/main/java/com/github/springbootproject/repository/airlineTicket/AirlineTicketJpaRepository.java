@@ -13,4 +13,5 @@ public interface AirlineTicketJpaRepository extends JpaRepository<AirlineTicket,
     Page<AirlineTicket> findAllByTicketType(String ticketType, Pageable pageable);
 
     List<AirlineTicket> findAllByArrivalLocationAndTicketType(String arrivalLocation, String ticketType);
+
 }
