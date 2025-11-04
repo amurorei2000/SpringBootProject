@@ -20,7 +20,9 @@ import java.util.Map;
                 "com.github.springbootproject.repository.passenger",
                 "com.github.springbootproject.repository.reservations",
                 "com.github.springbootproject.repository.users",
-                "com.github.springbootproject.repository.flight"
+                "com.github.springbootproject.repository.flight",
+                "com.github.springbootproject.repository.roles",
+                "com.github.springbootproject.repository.userPrincipal"
         },
         entityManagerFactoryRef = "entityManagerFactoryBean2",
         transactionManagerRef = "transactionManager2"
@@ -35,7 +37,9 @@ public class JpaConfig2 {
                 "com.github.springbootproject.repository.passenger",
                 "com.github.springbootproject.repository.reservations",
                 "com.github.springbootproject.repository.users",
-                "com.github.springbootproject.repository.flight");
+                "com.github.springbootproject.repository.flight",
+                "com.github.springbootproject.repository.roles",
+                "com.github.springbootproject.repository.userPrincipal");
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
