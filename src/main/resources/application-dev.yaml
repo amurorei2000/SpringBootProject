@@ -3,6 +3,10 @@ server:
 
 logging:
   config: classpath:logback-spring-dev.xml
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
 
 #스웨거 설정
 spring:

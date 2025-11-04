@@ -9,6 +9,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
@@ -64,6 +66,7 @@ public class ElectronicStoreController {
 
     @Operation(summary = "단일 Item id로 삭제")
     @DeleteMapping("items/{id}")
+    @CacheEvict(value = "items", allEntries = true)
     public String deleteItemByPathId(
             @Parameter(name = "id", description = "item ID", example = "1", required = true)
             @PathVariable Integer id) {
@@ -73,6 +76,7 @@ public class ElectronicStoreController {
 
     @Operation(summary = "모든 Item id로 수정")
     @PutMapping("/items/{id}")
+    @CacheEvict(value = "items", allEntries = true)
     public Item updateItem(
             @Parameter(name = "id", description = "item ID", example = "1", required = true)
             @PathVariable Integer id,

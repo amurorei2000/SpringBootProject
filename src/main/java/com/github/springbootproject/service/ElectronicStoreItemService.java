@@ -13,18 +13,15 @@ import com.github.springbootproject.web.dto.items.BuyOrder;
 import com.github.springbootproject.web.dto.items.Item;
 import com.github.springbootproject.web.dto.items.ItemBody;
 import com.github.springbootproject.web.dto.items.StoreInfo;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -39,7 +36,7 @@ public class ElectronicStoreItemService {
     private final StoreSalesRepository storeSalesRepository;
     private final StoreSalesJpaRepository storeSalesJpaRepository;
 
-
+    @Cacheable(value = "items", key = "#root.methodName")
     public List<Item> findAllItem() {
 //        List<ItemEntity> itemEntities = electronicStoreItemRepository.findAllItems();
         List<ItemEntity> itemEntities = electronicStoreItemJpaRepository.findAll();
@@ -74,6 +71,7 @@ public class ElectronicStoreItemService {
         return itemEntityCreated.getId();
     }
 
+    @Cacheable(value = "items", key = "#id")
     public Item findItemById(Integer id) {
 //        ItemEntity itemEntity = electronicStoreItemRepository.findItemById(id)
         ItemEntity itemEntity = electronicStoreItemJpaRepository.findById(id)
@@ -82,11 +80,12 @@ public class ElectronicStoreItemService {
         return ItemMapper.INSTANCE.itemEntityToItem(itemEntity);
     }
 
+    @Cacheable(value = "items", key = "#ids")
     public List<Item> findItemsByIds(List<Integer> ids) {
 //        Set<Integer> idSet = ids.stream().collect(Collectors.toSet());
 
 //        List<ItemEntity> itemEntities = electronicStoreItemRepository.findAllItems();
-        List<ItemEntity> itemEntities = electronicStoreItemJpaRepository.findAll();
+        List<ItemEntity> itemEntities = electronicStoreItemJpaRepository.findByIdIn(ids);
 
         if (itemEntities.isEmpty()) {
             throw new NotFoundException("아무 Items 들을 찾을 수 없습니다.");

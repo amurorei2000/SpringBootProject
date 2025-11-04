@@ -17,4 +17,5 @@ public interface ElectronicStoreItemJpaRepository extends JpaRepository<ItemEnti
 
     Page<ItemEntity> findAllByTypeIn(List<String> types, Pageable pageable);
 
+    List<ItemEntity> findByIdIn(List<Integer> ids);
 }
