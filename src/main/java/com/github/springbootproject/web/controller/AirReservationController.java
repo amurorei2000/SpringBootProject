@@ -1,5 +1,7 @@
 package com.github.springbootproject.web.controller;
 
+import com.github.springbootproject.repository.userDetails.CustomUserDetails;
+import com.github.springbootproject.repository.userPrincipal.UserPrincipal;
 import com.github.springbootproject.service.AirReservationService;
 import com.github.springbootproject.service.exceptions.InvalidValueException;
 import com.github.springbootproject.service.exceptions.NotAcceptException;
@@ -14,6 +16,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,18 +26,21 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class AirReservationController {
+
     private final AirReservationService airReservationService;
 
     @GetMapping("/tickets")
     @Operation(summary = "여행지 티켓 조회", description = "사용자가 선호하는 여행지를 조회하는 api")
     @ResponseStatus(HttpStatus.OK)
     public TicketResponse findAirlineTickets (
-            @Parameter(name = "user-Id", description = "유저 ID", example = "1")
-            @RequestParam("user-id") Integer userId,
+//            @Parameter(name = "user-Id", description = "유저 ID", example = "1")
+//            @RequestParam("user-id") Integer userId,
+            @AuthenticationPrincipal CustomUserDetails customUserDetails,
             @Parameter(name = "airline-ticket-type", description = "항공권 타입", example = "왕복|편도")
             @RequestParam("airline-ticket-type") String ticketType) {
         log.info("선호하는 여행지를 찾고 있습니다.");
 
+        Integer userId = customUserDetails.getUserId();
         List<Ticket> tickets = airReservationService.findUserFavoritePlaceTickets(userId, ticketType);
         log.info("여행지 정보를 찾았습니다.");
 

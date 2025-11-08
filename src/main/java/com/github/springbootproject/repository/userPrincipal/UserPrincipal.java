@@ -21,7 +21,7 @@ public class UserPrincipal {
     private Integer userPrincipalId;
 
     @OneToOne
-    @JoinColumn(name = "user")
+    @JoinColumn(name = "user_id")
     private UserEntity user;
 
     @Column(name = "email", nullable = false, unique = true)

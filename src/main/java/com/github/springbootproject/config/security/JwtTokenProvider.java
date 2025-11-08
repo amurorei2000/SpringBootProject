@@ -13,15 +13,13 @@ import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
-import java.util.Base64;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Component
 @RequiredArgsConstructor
 public class JwtTokenProvider {
 
-    private final String secretKey = Base64.getEncoder().encodeToString("super-coding".getBytes(StandardCharsets.UTF_8));
+    private final String secretKey = Base64.getEncoder().encodeToString("dGhpcy1pcy1hLXZlcnktc2VjdXJlLXNlY3JldC1rZXktZm9yLWp3dC10b2tlbi1nZW5lcmF0aW9uLXdpdGgtbWluaW11bS0zMi1ieXRlcw==".getBytes(StandardCharsets.UTF_8));
 
     // 토큰 유효 기간 (1시간)
     private long tokenValidMilliseconds = 1000L * 60 * 60;
@@ -37,18 +35,17 @@ public class JwtTokenProvider {
 
     // jwt 토큰 생성하기
     public String createToken(String email, List<String> roles) {
-        // 아이디와 롤 정보를 클레임에 추가
-        Claims claims = Jwts.claims()
-                .subject(email)
-                .build();
-
+        // 롤 정보를 클레임에 추가
+        Map<String, Object> claims = new HashMap<>();
         claims.put("roles", roles);
 
         // 토큰 유효 기간
         Date now = new Date();
         Date expiration = new Date(now.getTime() + tokenValidMilliseconds);
 
+        // jwt 생성 및 반환
         return Jwts.builder()
+                .subject(email)
                 .claims(claims)
                 .issuedAt(now)
                 .expiration(expiration)

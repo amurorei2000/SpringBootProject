@@ -1,5 +1,6 @@
 package com.github.springbootproject.service;
 
+import com.github.springbootproject.config.security.JwtTokenProvider;
 import com.github.springbootproject.repository.roles.Roles;
 import com.github.springbootproject.repository.roles.RolesRepository;
 import com.github.springbootproject.repository.userPrincipal.UserPrincipal;
@@ -8,11 +9,20 @@ import com.github.springbootproject.repository.userPrincipal.UserPrincipalRoles;
 import com.github.springbootproject.repository.userPrincipal.UserPrincipalRolesRepository;
 import com.github.springbootproject.repository.users.UserEntity;
 import com.github.springbootproject.repository.users.UserJpaRepository;
+import com.github.springbootproject.service.exceptions.NotAcceptException;
 import com.github.springbootproject.service.exceptions.NotFoundException;
+import com.github.springbootproject.web.dto.auth.Login;
 import com.github.springbootproject.web.dto.auth.SignUp;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -24,9 +34,12 @@ public class AuthService {
     private final UserPrincipalRolesRepository userPrincipalRolesRepository;
 
     private final PasswordEncoder passwordEncoder;
+    private final AuthenticationManager authenticationManager;
+    private final JwtTokenProvider jwtTokenProvider;
 
+    @Transactional(transactionManager = "transactionManager2")
     public boolean signUp(SignUp signUpRequest) {
-        String email = signUpRequest.getUserEmail();
+        String email = signUpRequest.getEmail();
         String password = signUpRequest.getPassword();
         String userName = signUpRequest.getName();
 
@@ -41,7 +54,6 @@ public class AuthService {
                         .userName(userName)
                         .build())
                 );
-
 
         // 유저 Principal 정보와 Role 정보를 DB에 등록
         Roles roles = rolesRepository.findByName("ROLE_USER")
@@ -60,5 +72,31 @@ public class AuthService {
                 .build());
 
         return true;
+    }
+
+    public String login(Login loginRequest) {
+        try {
+            String email = loginRequest.getEmail();
+            String password = loginRequest.getPassword();
+
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(email, password)
+            );
+
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+
+            UserPrincipal userPrincipal = userPrincipalRepository.findByEmailFetchJoin(email)
+                    .orElseThrow(() -> new NotFoundException("User Principal을 찾을 수 없습니다."));
+
+            List<String> roles = userPrincipal.getUserPrincipalRoles().stream()
+                    .map(UserPrincipalRoles::getRoles)
+                    .map(Roles::getName)
+                    .toList();
+
+            return jwtTokenProvider.createToken(email, roles);
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new NotAcceptException("로그인 할 수 없습니다.");
+        }
     }
 }
