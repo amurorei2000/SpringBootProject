@@ -69,7 +69,7 @@ public class AirReservationService {
 
         // 이 둘의 정보를 조합해서 Ticket DTO를 만든다.
         return airlineTickets.stream()
-                .map(airlineTicket -> TicketMapper.INSTANCE.airlineTicketToTicket(airlineTicket))
+                .map(TicketMapper.INSTANCE::airlineTicketToTicket)
                 .collect(Collectors.toList());
     }
 
@@ -91,7 +91,7 @@ public class AirReservationService {
         }
 
         // reservation 생성
-        Boolean isSuccess = false;
+        boolean isSuccess = false;
         Reservation reservation = new Reservation(passenger, airlineTicket);
 
         try {
@@ -176,7 +176,9 @@ public class AirReservationService {
     public List<String> getReservedArrivalLocations(String username) {
 
         // 유저 이름으로 패신저 아이디 조회 - users
-        UserEntity user = userJpaRepository.findByUserName(username);
+        UserEntity user = userJpaRepository.findByUserName(username)
+                .orElseThrow(() -> new NotFoundException("유저 이름을 찾을 수 없습니다."));
+
         Passenger passenger = passengerJpaRepository.findPassengerByUser_UserId(user.getUserId())
                 .orElseThrow(() -> new NotFoundException("해당 사용자 이름 " + username + "에 해당하는 passenger가 없습니다."));
 

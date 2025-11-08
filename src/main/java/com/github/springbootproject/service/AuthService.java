@@ -7,7 +7,7 @@ import com.github.springbootproject.repository.userPrincipal.UserPrincipalReposi
 import com.github.springbootproject.repository.userPrincipal.UserPrincipalRoles;
 import com.github.springbootproject.repository.userPrincipal.UserPrincipalRolesRepository;
 import com.github.springbootproject.repository.users.UserEntity;
-import com.github.springbootproject.repository.users.UserRepository;
+import com.github.springbootproject.repository.users.UserJpaRepository;
 import com.github.springbootproject.service.exceptions.NotFoundException;
 import com.github.springbootproject.web.dto.auth.SignUp;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 public class AuthService {
 
     private final UserPrincipalRepository userPrincipalRepository;
-    private final UserRepository userRepository;
+    private final UserJpaRepository userJpaRepository;
     private final RolesRepository rolesRepository;
     private final UserPrincipalRolesRepository userPrincipalRolesRepository;
 
@@ -36,8 +36,8 @@ public class AuthService {
         }
 
         // 같은 이름의 유저가 있으면 id만 등록하고, 없으면 새 유저를 DB에 생성
-        UserEntity userFound = userRepository.findByUserName(userName)
-                .orElseGet(() -> userRepository.save(UserEntity.builder()
+        UserEntity userFound = userJpaRepository.findByUserName(userName)
+                .orElseGet(() -> userJpaRepository.save(UserEntity.builder()
                         .userName(userName)
                         .build())
                 );
