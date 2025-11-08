@@ -14,6 +14,7 @@ import java.util.Base64;
 @RestController
 @RequestMapping("/api")
 public class SessionTokenSampleController {
+
     private final String secretKey = "123456789abcdefghijklmn";
     private final SecretKey secretHS256 = Keys.hmacShaKeyFor(Base64.getEncoder().encode(secretKey.getBytes()));
 
@@ -49,13 +50,12 @@ public class SessionTokenSampleController {
     @GetMapping("/generate-token")
     public String generateToken(HttpServletResponse httpServletResponse) {
 
-
         String jwt = Jwts.builder()
-                .setSubject("token1")
+                .subject("token1")
                 .claim("user", "박원석")
                 .claim("gender", "남자")
                 .claim("job", "개발자")
-                .signWith(secretHS256, SignatureAlgorithm.HS256)
+                .signWith(secretHS256)
                 .compact();
 
         httpServletResponse.addHeader("Token", jwt);
@@ -67,11 +67,11 @@ public class SessionTokenSampleController {
 
 
         String jwt = Jwts.builder()
-                .setSubject("token2")
+                .subject("token2")
                 .claim("user", "선희")
                 .claim("gender", "여자")
                 .claim("job", "공인중개사")
-                .signWith(secretHS256, SignatureAlgorithm.HS256)
+                .signWith(secretHS256)
                 .compact();
 
         httpServletResponse.addHeader("Token", jwt);
@@ -84,8 +84,8 @@ public class SessionTokenSampleController {
         Claims claims = Jwts.parser()
                 .verifyWith(secretHS256)
                 .build()
-                .parseClaimsJws(token)
-                .getBody();
+                .parseSignedClaims(token)
+                .getPayload();
 
         String user = (String) claims.get("user");
         String gender = (String) claims.get("gender");
