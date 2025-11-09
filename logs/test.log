@@ -4528,3 +4528,387 @@ java.sql.SQLSyntaxErrorException: Unknown column 'user' in 'field list'
 2025-11-09 04:24:32.096 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
 2025-11-09 04:24:32.098 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-11-09 04:24:32.099 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:08:20.265 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Starting SpringBootProjectApplication using Java 21.0.8 with PID 2388 (E:\Programming\SuperCoding\SpringBootProject\build\classes\java\main started by amuro in E:\Programming\SuperCoding\SpringBootProject)
+2025-11-09 12:08:20.282 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - The following 1 profile is active: "dev"
+2025-11-09 12:08:20.675 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-09 12:08:20.675 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09 12:08:20.714 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2025-11-09 12:08:20.715 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-09 12:08:20.715 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09 12:08:20.737 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 21 ms. Found 9 JPA repository interfaces.
+2025-11-09 12:08:21.177 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2025-11-09 12:08:21.185 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-09 12:08:21.186 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-11-09 12:08:21.186 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-09 12:08:21.234 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-11-09 12:08:21.234 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 916 ms
+2025-11-09 12:08:21.311 [main] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09 12:08:21.341 [main] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-09 12:08:21.360 [main] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2025-11-09 12:08:21.605 [main] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09 12:08:21.848 [main] [34mINFO [0;39m [36mo.hibernate.orm.connections.pooling[0;39m - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@5d9d2119']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-09 12:08:22.369 [main] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09 12:08:22.371 [main] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:08:22.380 [main] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09 12:08:22.382 [main] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2025-11-09 12:08:22.417 [main] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09 12:08:22.428 [main] [34mINFO [0;39m [36mo.hibernate.orm.connections.pooling[0;39m - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@31ecb361']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-09 12:08:22.515 [main] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09 12:08:22.515 [main] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:08:22.666 [main] [34mINFO [0;39m [36mo.s.d.j.r.query.QueryEnhancerFactory[0;39m - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-09 12:08:23.189 [main] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-11-09 12:08:23.521 [main] [34mINFO [0;39m [36mo.s.v.b.OptionalValidatorFactoryBean[0;39m - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-09 12:08:23.664 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-09 12:08:23.679 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2025-11-09 12:08:23.684 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Started SpringBootProjectApplication in 3.772 seconds (process running for 4.221)
+2025-11-09 12:13:08.610 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-09 12:13:08.614 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2025-11-09 12:13:08.617 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:13:08.618 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:21:32.993 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Starting SpringBootProjectApplication using Java 21.0.8 with PID 15956 (E:\Programming\SuperCoding\SpringBootProject\build\classes\java\main started by amuro in E:\Programming\SuperCoding\SpringBootProject)
+2025-11-09 12:21:32.995 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - The following 1 profile is active: "dev"
+2025-11-09 12:21:33.510 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-09 12:21:33.510 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09 12:21:33.551 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2025-11-09 12:21:33.552 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-09 12:21:33.552 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09 12:21:33.575 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 22 ms. Found 9 JPA repository interfaces.
+2025-11-09 12:21:34.064 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2025-11-09 12:21:34.074 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-09 12:21:34.078 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-11-09 12:21:34.078 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-09 12:21:34.153 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-11-09 12:21:34.153 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1125 ms
+2025-11-09 12:21:34.252 [main] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09 12:21:34.289 [main] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-09 12:21:34.317 [main] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2025-11-09 12:21:34.628 [main] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09 12:21:34.886 [main] [34mINFO [0;39m [36mo.hibernate.orm.connections.pooling[0;39m - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@370c7cc5']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-09 12:21:35.439 [main] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09 12:21:35.441 [main] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:21:35.449 [main] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09 12:21:35.451 [main] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2025-11-09 12:21:35.494 [main] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09 12:21:35.505 [main] [34mINFO [0;39m [36mo.hibernate.orm.connections.pooling[0;39m - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@21cb5648']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-09 12:21:35.609 [main] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09 12:21:35.609 [main] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:21:35.749 [main] [34mINFO [0;39m [36mo.s.d.j.r.query.QueryEnhancerFactory[0;39m - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-09 12:21:36.276 [main] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-11-09 12:21:36.629 [main] [34mINFO [0;39m [36mo.s.v.b.OptionalValidatorFactoryBean[0;39m - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-09 12:21:36.777 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-09 12:21:36.791 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2025-11-09 12:21:36.797 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Started SpringBootProjectApplication in 4.17 seconds (process running for 4.565)
+2025-11-09 12:22:04.788 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-09 12:22:04.788 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2025-11-09 12:22:04.789 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2025-11-09 12:22:04.872 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.s.web.filters.LoggingFilter[0;39m - POST/v1/api/sign/login 요청이 들어왔습니다.
+2025-11-09 12:22:05.041 [http-nio-8080-exec-2] [39mDEBUG[0;39m [36morg.hibernate.SQL[0;39m - 
+    /* SELECT
+        up 
+    FROM
+        UserPrincipal up 
+    JOIN
+        
+    FETCH
+        up.userPrincipalRoles upr 
+    JOIN
+        
+    FETCH
+        upr.roles 
+    WHERE
+        up.email = :email */ select
+            up1_0.user_principal_id,
+            up1_0.email,
+            up1_0.password,
+            up1_0.user_id,
+            upr1_0.user_principal_id,
+            upr1_0.user_principal_role_id,
+            r1_0.role_id,
+            r1_0.name 
+        from
+            user_principal up1_0 
+        join
+            user_principal_roles upr1_0 
+                on up1_0.user_principal_id=upr1_0.user_principal_id 
+        join
+            roles r1_0 
+                on r1_0.role_id=upr1_0.role_id 
+        where
+            up1_0.email=?
+2025-11-09 12:22:05.346 [http-nio-8080-exec-2] [31mWARN [0;39m [36mo.h.e.jdbc.spi.SqlExceptionHelper[0;39m - SQL Error: 1146, SQLState: 42S02
+2025-11-09 12:22:05.347 [http-nio-8080-exec-2] [1;31mERROR[0;39m [36mo.h.e.jdbc.spi.SqlExceptionHelper[0;39m - Table 'chapter_96.user_principal' doesn't exist
+2025-11-09 12:22:05.356 [http-nio-8080-exec-2] [1;31mERROR[0;39m [36mc.g.s.w.a.ExceptionControllerAdvice[0;39m - Client 요청이 모종의 이유로 거부됩니다. 로그인 할 수 없습니다.
+2025-11-09 12:22:05.362 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.s.w.I.RequestTimeLoggingInterceptor[0;39m - POST /v1/api/sign/login executed in 488 ms
+2025-11-09 12:22:05.364 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.s.web.filters.LoggingFilter[0;39m - POST/v1/api/sign/login가 상태 406 (으)로 응답이 나갑니다.
+2025-11-09 12:23:23.086 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-09 12:23:23.091 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2025-11-09 12:23:23.094 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:23:23.095 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:35:48.677 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Starting SpringBootProjectApplication using Java 21.0.8 with PID 24800 (E:\Programming\SuperCoding\SpringBootProject\build\classes\java\main started by amuro in E:\Programming\SuperCoding\SpringBootProject)
+2025-11-09 12:35:48.678 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - The following 1 profile is active: "dev"
+2025-11-09 12:35:49.109 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-09 12:35:49.109 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09 12:35:49.143 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2025-11-09 12:35:49.144 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-09 12:35:49.144 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-09 12:35:49.165 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 20 ms. Found 9 JPA repository interfaces.
+2025-11-09 12:35:49.602 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2025-11-09 12:35:49.609 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-09 12:35:49.610 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-11-09 12:35:49.610 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-09 12:35:49.655 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-11-09 12:35:49.655 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 943 ms
+2025-11-09 12:35:49.730 [main] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09 12:35:49.759 [main] [34mINFO [0;39m [36morg.hibernate.Version[0;39m - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-09 12:35:49.779 [main] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2025-11-09 12:35:50.020 [main] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09 12:35:50.305 [main] [34mINFO [0;39m [36mo.hibernate.orm.connections.pooling[0;39m - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@370c7cc5']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-09 12:35:50.835 [main] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09 12:35:50.837 [main] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:35:50.845 [main] [34mINFO [0;39m [36mo.h.jpa.internal.util.LogHelper[0;39m - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-09 12:35:50.847 [main] [34mINFO [0;39m [36mo.h.c.i.RegionFactoryInitiator[0;39m - HHH000026: Second-level cache disabled
+2025-11-09 12:35:50.884 [main] [34mINFO [0;39m [36mo.s.o.j.p.SpringPersistenceUnitInfo[0;39m - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-09 12:35:50.894 [main] [34mINFO [0;39m [36mo.hibernate.orm.connections.pooling[0;39m - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.DriverManagerDataSource@21cb5648']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-09 12:35:50.980 [main] [34mINFO [0;39m [36mo.h.e.t.j.p.i.JtaPlatformInitiator[0;39m - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-09 12:35:50.980 [main] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:35:51.121 [main] [34mINFO [0;39m [36mo.s.d.j.r.query.QueryEnhancerFactory[0;39m - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-09 12:35:51.625 [main] [34mINFO [0;39m [36mo.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer[0;39m - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2025-11-09 12:35:51.957 [main] [34mINFO [0;39m [36mo.s.v.b.OptionalValidatorFactoryBean[0;39m - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-09 12:35:52.109 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-09 12:35:52.125 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2025-11-09 12:35:52.130 [main] [34mINFO [0;39m [36mc.g.s.SpringBootProjectApplication[0;39m - Started SpringBootProjectApplication in 3.762 seconds (process running for 4.146)
+2025-11-09 12:35:54.417 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-09 12:35:54.417 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2025-11-09 12:35:54.418 [http-nio-8080-exec-2] [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 1 ms
+2025-11-09 12:35:54.499 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.s.web.filters.LoggingFilter[0;39m - POST/v1/api/sign/login 요청이 들어왔습니다.
+2025-11-09 12:35:54.664 [http-nio-8080-exec-2] [39mDEBUG[0;39m [36morg.hibernate.SQL[0;39m - 
+    /* SELECT
+        up 
+    FROM
+        UserPrincipal up 
+    JOIN
+        
+    FETCH
+        up.userPrincipalRoles upr 
+    JOIN
+        
+    FETCH
+        upr.roles 
+    WHERE
+        up.email = :email */ select
+            up1_0.user_principal_id,
+            up1_0.email,
+            up1_0.password,
+            up1_0.user_id,
+            upr1_0.user_principal_id,
+            upr1_0.user_principal_role_id,
+            r1_0.role_id,
+            r1_0.name 
+        from
+            user_principal up1_0 
+        join
+            user_principal_roles upr1_0 
+                on up1_0.user_principal_id=upr1_0.user_principal_id 
+        join
+            roles r1_0 
+                on r1_0.role_id=upr1_0.role_id 
+        where
+            up1_0.email=?
+2025-11-09 12:35:54.696 [http-nio-8080-exec-2] [39mDEBUG[0;39m [36morg.hibernate.SQL[0;39m - 
+    select
+        ue1_0.user_id,
+        ue1_0.like_travel_place,
+        p1_0.passenger_id,
+        p1_0.passport_num,
+        p1_0.user_id,
+        ue1_0.phone_num,
+        ue1_0.user_name 
+    from
+        users ue1_0 
+    left join
+        passenger p1_0 
+            on ue1_0.user_id=p1_0.user_id 
+    where
+        ue1_0.user_id=?
+2025-11-09 12:35:54.774 [http-nio-8080-exec-2] [39mDEBUG[0;39m [36morg.hibernate.SQL[0;39m - 
+    /* SELECT
+        up 
+    FROM
+        UserPrincipal up 
+    JOIN
+        
+    FETCH
+        up.userPrincipalRoles upr 
+    JOIN
+        
+    FETCH
+        upr.roles u 
+    WHERE
+        up.email = :email */ select
+            up1_0.user_principal_id,
+            up1_0.email,
+            up1_0.password,
+            up1_0.user_id,
+            upr1_0.user_principal_id,
+            upr1_0.user_principal_role_id,
+            r1_0.role_id,
+            r1_0.name 
+        from
+            user_principal up1_0 
+        join
+            user_principal_roles upr1_0 
+                on up1_0.user_principal_id=upr1_0.user_principal_id 
+        join
+            roles r1_0 
+                on r1_0.role_id=upr1_0.role_id 
+        where
+            up1_0.email=?
+2025-11-09 12:35:54.784 [http-nio-8080-exec-2] [39mDEBUG[0;39m [36morg.hibernate.SQL[0;39m - 
+    select
+        ue1_0.user_id,
+        ue1_0.like_travel_place,
+        p1_0.passenger_id,
+        p1_0.passport_num,
+        p1_0.user_id,
+        ue1_0.phone_num,
+        ue1_0.user_name 
+    from
+        users ue1_0 
+    left join
+        passenger p1_0 
+            on ue1_0.user_id=p1_0.user_id 
+    where
+        ue1_0.user_id=?
+2025-11-09 12:35:54.810 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.s.w.I.RequestTimeLoggingInterceptor[0;39m - POST /v1/api/sign/login executed in 309 ms
+2025-11-09 12:35:54.811 [http-nio-8080-exec-2] [34mINFO [0;39m [36mc.g.s.web.filters.LoggingFilter[0;39m - POST/v1/api/sign/login가 상태 200 (으)로 응답이 나갑니다.
+2025-11-09 12:36:58.061 [http-nio-8080-exec-5] [39mDEBUG[0;39m [36morg.hibernate.SQL[0;39m - 
+    /* SELECT
+        up 
+    FROM
+        UserPrincipal up 
+    JOIN
+        
+    FETCH
+        up.userPrincipalRoles upr 
+    JOIN
+        
+    FETCH
+        upr.roles 
+    WHERE
+        up.email = :email */ select
+            up1_0.user_principal_id,
+            up1_0.email,
+            up1_0.password,
+            up1_0.user_id,
+            upr1_0.user_principal_id,
+            upr1_0.user_principal_role_id,
+            r1_0.role_id,
+            r1_0.name 
+        from
+            user_principal up1_0 
+        join
+            user_principal_roles upr1_0 
+                on up1_0.user_principal_id=upr1_0.user_principal_id 
+        join
+            roles r1_0 
+                on r1_0.role_id=upr1_0.role_id 
+        where
+            up1_0.email=?
+2025-11-09 12:36:58.070 [http-nio-8080-exec-5] [39mDEBUG[0;39m [36morg.hibernate.SQL[0;39m - 
+    select
+        ue1_0.user_id,
+        ue1_0.like_travel_place,
+        p1_0.passenger_id,
+        p1_0.passport_num,
+        p1_0.user_id,
+        ue1_0.phone_num,
+        ue1_0.user_name 
+    from
+        users ue1_0 
+    left join
+        passenger p1_0 
+            on ue1_0.user_id=p1_0.user_id 
+    where
+        ue1_0.user_id=?
+2025-11-09 12:36:58.072 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.s.web.filters.LoggingFilter[0;39m - GET/v1/api/air-reservation/tickets 요청이 들어왔습니다.
+2025-11-09 12:36:58.076 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.s.w.c.AirReservationController[0;39m - 선호하는 여행지를 찾고 있습니다.
+2025-11-09 12:36:58.092 [http-nio-8080-exec-5] [39mDEBUG[0;39m [36morg.hibernate.SQL[0;39m - 
+    select
+        ue1_0.user_id,
+        ue1_0.like_travel_place,
+        p1_0.passenger_id,
+        p1_0.passport_num,
+        p1_0.user_id,
+        ue1_0.phone_num,
+        ue1_0.user_name 
+    from
+        users ue1_0 
+    left join
+        passenger p1_0 
+            on ue1_0.user_id=p1_0.user_id 
+    where
+        ue1_0.user_id=?
+2025-11-09 12:36:58.102 [http-nio-8080-exec-5] [39mDEBUG[0;39m [36morg.hibernate.SQL[0;39m - 
+    /* <criteria> */ select
+        at1_0.ticket_id,
+        at1_0.arrival_loc,
+        at1_0.departure_at,
+        at1_0.departure_loc,
+        at1_0.return_at,
+        at1_0.tax,
+        at1_0.ticket_type,
+        at1_0.total_price 
+    from
+        airline_ticket at1_0 
+    where
+        at1_0.arrival_loc=? 
+        and at1_0.ticket_type=?
+2025-11-09 12:36:58.113 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.s.w.c.AirReservationController[0;39m - 여행지 정보를 찾았습니다.
+2025-11-09 12:36:58.124 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.s.w.I.RequestTimeLoggingInterceptor[0;39m - GET /v1/api/air-reservation/tickets executed in 52 ms
+2025-11-09 12:36:58.124 [http-nio-8080-exec-5] [34mINFO [0;39m [36mc.g.s.web.filters.LoggingFilter[0;39m - GET/v1/api/air-reservation/tickets가 상태 200 (으)로 응답이 나갑니다.
+2025-11-09 12:49:52.881 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-09 12:49:52.886 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2025-11-09 12:49:52.889 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-09 12:49:52.890 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.o.j.LocalContainerEntityManagerFactoryBean[0;39m - Closing JPA EntityManagerFactory for persistence unit 'default'

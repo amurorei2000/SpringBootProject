@@ -1,5 +1,8 @@
 package com.github.springbootproject.config;
 
+import com.github.springbootproject.properties.DataSourceProperties;
+import lombok.RequiredArgsConstructor;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -10,29 +13,33 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 
 @Configuration
+@EnableConfigurationProperties(DataSourceProperties.class)
+@RequiredArgsConstructor
 public class jdbcConfig {
+
+    private final DataSourceProperties dataSourceProperties;
 
     @Bean
     public DataSource dataSource1() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUsername("root");
-        dataSource.setPassword("pws298101@");
+        dataSource.setUsername(dataSourceProperties.getUsername());
+        dataSource.setPassword(dataSourceProperties.getPassword());
         // mysql 드라이버 등록
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setDriverClassName(dataSourceProperties.getDriverClassName());
         // database 주소
-        dataSource.setUrl("jdbc:mysql://localhost:3306/chapter_96?useUnicode=true&characterEncoding=UTF-8");
+        dataSource.setUrl(dataSourceProperties.getUrl1());
         return dataSource;
     }
 
     @Bean
     public DataSource dataSource2() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUsername("root");
-        dataSource.setPassword("pws298101@");
+        dataSource.setUsername(dataSourceProperties.getUsername());
+        dataSource.setPassword(dataSourceProperties.getPassword());
         // mysql 드라이버 등록
-        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setDriverClassName(dataSourceProperties.getDriverClassName());
         // database 주소
-        dataSource.setUrl("jdbc:mysql://localhost:3306/chapter_97?useUnicode=true&characterEncoding=UTF-8");
+        dataSource.setUrl(dataSourceProperties.getUrl2());
         return dataSource;
     }
 

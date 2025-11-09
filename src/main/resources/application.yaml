@@ -1,3 +1,23 @@
 server:
   port: 8090
 
+logging:
+  config: classpath:logback-spring-dev.xml
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+
+#스웨거 설정
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+# 환경 변수
+datasource:
+  username: ${DATABASE_USERNAME}
+  password: ${DATABASE_PASSWORD}
+  driver-class-name: ${DATABASE_DRIVERCLASSNAME}
+  url1: ${DATABASE_URL1}
+  url2: ${DATABASE_URL2}

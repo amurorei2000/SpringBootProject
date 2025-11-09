@@ -3,8 +3,10 @@ package com.github.springbootproject.config.security;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,7 +21,15 @@ import java.util.*;
 @RequiredArgsConstructor
 public class JwtTokenProvider {
 
-    private final String secretKey = Base64.getEncoder().encodeToString("dGhpcy1pcy1hLXZlcnktc2VjdXJlLXNlY3JldC1rZXktZm9yLWp3dC10b2tlbi1nZW5lcmF0aW9uLXdpdGgtbWluaW11bS0zMi1ieXRlcw==".getBytes(StandardCharsets.UTF_8));
+    @Value("${jwt.secret-key-source}")
+    private String secretKeySource;
+    private String secretKey;
+
+    @PostConstruct
+    public void setUp() {
+        secretKey = Base64.getEncoder().encodeToString(secretKeySource.getBytes(StandardCharsets.UTF_8));
+    }
+
 
     // 토큰 유효 기간 (1시간)
     private long tokenValidMilliseconds = 1000L * 60 * 60;
